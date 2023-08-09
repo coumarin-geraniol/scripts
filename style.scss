@@ -1,0 +1,143 @@
+// SASS Variables
+$white: #fff;
+$navy: #2e2f35;
+$navy-dark: #1e1e24;
+$navy-light: #494a50;
+$grey: #a5a5a4;
+$green: #20c270;
+$green-dark: #18a960;
+
+
+// Moves menu to the left/right side of screen
+$menu-orientation: left;
+
+@media screen and (max-width: 600px) {
+  .pushNav {
+    width: 100%;
+    #{$menu-orientation}: -100%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .pushNav {
+    width: 100%;
+    #{$menu-orientation}: -100%;
+  }
+}
+
+ul.pushNav {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.pushNav {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+  background: $navy;
+  hr {
+    border: 1px solid #555;
+  }
+}
+.trans{
+  transition: ease-in-out 0.5s;
+}
+.pushNav ,.pushNav a {
+  font-size: 1em;
+  font-family: helvetica, sens-serif;
+  font-weight: 100;
+  color: $white;
+  text-decoration: none;
+}
+
+.pushNavIsOpen {
+  overflow: auto;
+  height: 100%;
+}
+
+.js-topPushNav.isOpen, .pushNav_level.isOpen {
+  #{$menu-orientation} : 0;
+}
+
+.closeLevel, .openLevel {
+  cursor: pointer;
+}
+
+.openLevel, .closeLevel, .pushNav a {
+  padding: 1em 0;
+  display: block;
+  text-indent: 20px;
+  transition: background 0.4s ease-in-out;
+
+  &:hover {
+
+  }
+}
+
+.hdg {
+  background-color: $navy-dark;
+}
+
+.closeLevel, closelevel > i {
+  font-size: 1em;
+  color: $grey;
+}
+
+.burger {
+  position: absolute;
+  top: 24px;
+  #{$menu-orientation}: 48px;
+
+  i {
+    font-size: 3em;
+  }
+}
+
+.screen {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 0;
+  top: 0;
+  bottom: 0;
+  #{$menu-orientation}: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.pushNavIsOpen .screen {
+  height: 100%;
+  opacity: 1;
+}
+
+
+// Font Awesome styles - delete if not using font awesome
+.fa {
+  display: inline;
+  padding: 5px;
+}
+
+// Delete body and .wrapper styles
+body {
+  background-size: 100% auto;
+  background: black no-repeat;
+}
+
+.wrapper {
+  max-width: 625px;
+  margin: 120px auto;
+  padding: 0 20px;
+  color: $white;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 1.1em;
+  line-height: 1.4em;
+
+  a {
+    color: $green;
+    text-decoration: none;
+  }
+}

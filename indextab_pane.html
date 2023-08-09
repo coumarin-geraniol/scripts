@@ -1,0 +1,1865 @@
+<form action="{{ route('admin.countries.update', $country->id) }}" method="POST"
+      enctype="multipart/form-data">
+    @csrf
+    @method('PATCH')
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill"
+                       href="#custom-content-below-home" role="tab" aria-controls="custom-content-below-home"
+                       aria-selected="true">SEO Inputs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill"
+                       href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile"
+                       aria-selected="false">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill"
+                       href="#custom-content-below-messages" role="tab" aria-controls="custom-content-below-messages"
+                       aria-selected="false">Top Cities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="custom-content-below-settings-tab" data-toggle="pill"
+                       href="#custom-content-below-settings" role="tab" aria-controls="custom-content-below-settings"
+                       aria-selected="false">SEO Inputs</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="custom-content-below-tabContent">
+
+                <div class="tab-pane fade show active" id="custom-content-below-home" role="tabpanel"
+                     aria-labelledby="custom-content-below-home-tab">
+
+
+                    <div class="form-group row mb-4">
+                        <label class="col-sm-1 col-form-label text-right">Title</label>
+                        <div class="col-sm-11">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name"
+                                       placeholder="Enter country name"
+                                       value="{{ $country->translation('name') }}">
+                                @error('name')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-4">
+                        <label class="col-sm-1 col-form-label text-right">Content text
+                            for {{ $country->translation('name') }}</label>
+                        <div class="col-sm-11">
+                                    <textarea class="form-control" placeholder="Enter content text for this country"
+                                              name="content">{{ isset($country->content) ?  ($country->translation('content')) : old('content') }}</textarea>
+                            @error('content')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row mb-5">
+                        <label class="col-sm-1 col-form-label text-right">Why
+                            visit {{ $country->translation('name') }}</label>
+                        <div class="col-sm-11">
+                                    <textarea class="form-control" placeholder="Enter why people visit this country"
+                                              name="why_visit">{{ isset($country->why_visit) ?  ($country->translation('why_visit')) : old('why_visit') }}</textarea>
+                            @error('why_visit')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row mb-4">
+                        <label class="col-sm-1 col-form-label text-right">Services</label>
+                        <div class="col-sm-11">
+                            <select class="select2" name="service_ids[]" multiple="multiple"
+                                    data-placeholder="Select a Service" style="width: 100%;">
+                                @foreach($services as $service)
+                                <option value="{{ $service->id }}"
+                                        {{ is_array( $country->services->pluck('id')->toArray() ) &&
+                                    in_array($service->id, $country->services->pluck('id')->toArray() ) ? 'selected' :
+                                    '' }}>
+                                    {{ $service->title }}
+                                </option>
+                                @endforeach
+                            </select>
+                            @error('service_ids')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row mb-4">
+
+                        <label class="col-sm-1 col-form-label text-right">Preview Photo</label>
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input image-input"
+                                           name="preview_image"
+                                           id="image-preview">
+                                    <label class="custom-file-label">Choose image</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Upload</span>
+                                </div>
+                            </div>
+                            @error('preview_image')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                            <div id="images-preview-image">
+                                @if( isset($country->preview_image) )
+                                <img style="max-width: 190px;" class="mt-4 mx-2"
+                                     src="{{ asset('storage/' . $country->preview_image) }}"
+                                     alt="preview_image">
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-4">
+
+                        <label class="col-sm-1 col-form-label text-right">Color Photo</label>
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input image-input"
+                                           name="image_color"
+                                           id="image_color">
+                                    <label class="custom-file-label">Choose image</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Upload</span>
+                                </div>
+                            </div>
+                            @error('image_color')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                            <div id="images-image_color">
+                                @if( isset($country->image_color) )
+                                <img style="max-width: 190px;" class="mt-4 mx-2"
+                                     src="{{ asset('storage/' . $country->image_color) }}"
+                                     alt="image_color">
+                                @endif
+                            </div>
+                        </div>
+
+                        <label class="col-sm-1 col-form-label text-right">Black Photo</label>
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input image-input"
+                                           name="image_black"
+                                           id="image_black">
+                                    <label class="custom-file-label">Choose image</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Upload</span>
+                                </div>
+                            </div>
+                            @error('image_black')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                            <div id="images-image_black">
+                                @if( isset($country->image_black) )
+                                <img style="max-width: 190px;" class="mt-4 mx-2"
+                                     src="{{ asset('storage/' . $country->image_black) }}"
+                                     alt="image_black">
+                                @endif
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row mb-5">
+                        <label class="col-sm-1 col-form-label text-right">Large Text
+                            About {{ $country->translation('name') }}</label>
+                        <div class="col-sm-11">
+                                    <textarea class="form-control" placeholder="Enter Large Text About this country"
+                                              name="text_large">{{ isset($country->text_large) ?  ($country->translation('text_large')) : old('text_large') }}</textarea>
+                            @error('text_large')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="form-group row mb-5">
+                        <label class="col-sm-1 col-form-label text-right">Small Text
+                            About {{ $country->translation('name') }}</label>
+                        <div class="col-sm-11">
+                                    <textarea class="form-control" placeholder="Enter Small Text About this country"
+                                              name="text_small">{{ isset($country->text_small) ?  ($country->translation('text_small')) : old('text_small') }}</textarea>
+                            @error('text_small')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row mb-4">
+                        <label class="col-sm-1 col-form-label text-right">Rules</label>
+                        <div class="col-sm-11" style="display: flex; flex-direction: row; width: 100%">
+
+                            <div class="ml-2" style="width: 50%;">
+                                <table class="row table table-bordered" id="dynamicAddRemoveObserve">
+                                    <tr>
+                                        <th>What to observe</th>
+                                    </tr>
+                                    @if(!empty($country->rules['observe']))
+                                    @foreach($country->rules['observe'] as $index => $observe)
+                                    <tr>
+                                        <td>
+                                                            <textarea name="rules[observe][{{ $index }}]"
+                                                                      placeholder="Enter content"
+                                                                      class="form-control"
+                                                                      aria-label="">{{ $observe }}</textarea>
+                                        </td>
+                                        <td>
+                                            <button type="button"
+                                                    class="w-100 btn btn-outline-danger remove-observe-field">
+                                                Remove
+                                            </button>
+
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                    @else
+                                    <tr>
+                                        <td>
+                                                    <textarea name="rules[observe][0]" placeholder="Enter content"
+                                                              class="form-control" aria-label=""></textarea>
+                                        </td>
+                                        <td>
+                                            <button type="button"
+                                                    class="w-100 btn btn-outline-danger remove-observe-field">
+                                                Remove
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    @endif
+                                </table>
+
+                                <div class="add-button">
+                                    <button type="button" name="addObserve" id="dynamic-ar-observe"
+                                            class="btn btn-outline-success" style="width: fit-content">Add
+                                        Observe Field
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div class="ml-2" style="width: 50%;">
+                                <table class="row table table-bordered" id="dynamicAddRemoveAvoid">
+                                    <tr>
+                                        <th>What to avoid</th>
+                                    </tr>
+                                    @if(!empty($country->rules['avoid']))
+                                    @foreach($country->rules['avoid'] as $index => $avoid)
+                                    <tr>
+                                        <td>
+                                                        <textarea name="rules[avoid][{{ $index }}]"
+                                                                  placeholder="Enter content"
+                                                                  class="form-control"
+                                                                  aria-label="">{{ $avoid }}</textarea>
+                                        </td>
+                                        <td>
+                                            <button type="button"
+                                                    class="w-100 btn btn-outline-danger remove-avoid-field">
+                                                Remove
+                                            </button>
+
+                                        </td>
+                                    </tr>
+                                    @endforeach
+                                    @else
+                                    <tr>
+                                        <td>
+                                                    <textarea name="rules[avoid][0]" placeholder="Enter content"
+                                                              class="form-control" aria-label=""></textarea>
+                                        </td>
+                                        <td>
+                                            <button type="button"
+                                                    class="w-100 btn btn-outline-danger remove-avoid-field">
+                                                Remove
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    @endif
+                                </table>
+                                <div class="add-button">
+                                    <button type="button" name="addAvoid" id="dynamic-ar-avoid"
+                                            class="btn btn-outline-success" style="width: fit-content">Add Avoid
+                                        Field
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel"
+                     aria-labelledby="custom-content-below-profile-tab">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis commodi consequuntur
+                    excepturi explicabo magnam nostrum pariatur quidem, reiciendis tempore veritatis vero! Ab architecto
+                    aspernatur consectetur consequatur? A amet eligendi enim eos, fugit labore magni nisi odit possimus
+                    provident quis quo sint tempora temporibus unde, vero vitae. Dolorum, illum reiciendis!
+
+                </div>
+
+
+                <div class="tab-pane fade" id="custom-content-below-messages" role="tabpanel"
+                     aria-labelledby="custom-content-below-messages-tab">
+
+                    <div class="form-group row mb-4">
+                        <label class="col-sm-2 col-form-label text-right">Какое количество дней
+                            запланировать для путешествия по
+                            {{ $country->translation('name') }}?</label>
+                        <div class="col-sm-10">
+                                        <textarea class="form-control message-box"
+                                                  name="recommended_duration">{{ $country->recommended_duration}}</textarea>
+                            @error('recommended_duration')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <input type="text" id="cityTitle" hidden>
+                    <input type="text" id="minDays" hidden>
+                    <input type="text" id="highlights" hidden>
+                    <select id="sights" hidden></select>
+
+
+                    <div class="form-group row mb-4">
+
+                        <table class="row table table-bordered top_city" id="dynamicAddRemoveTopCity">
+                            <tr>
+                                <th>Title</th>
+                                <th>Content</th>
+                                <th>Content</th>
+                                <th>Action</th>
+                            </tr>
+                            @foreach($country->topCities as $index => $topCity)
+                            <tr>
+                                <td>
+                                    <input type="text" name="cityId[]" value="{{ $topCity->id }}"
+                                           hidden>
+
+                                    <input type="text" name="cityTitle[]"
+                                           placeholder="Enter title"
+                                           value="{{ $topCity->translation('title') }}"
+                                           class="form-control" aria-label=""/>
+                                </td>
+                                <td>
+                                    <input type="text" name="minDays[]"
+                                           placeholder="Enter title"
+                                           value="{{ $topCity->translation('min_days') }}"
+                                           class="form-control" aria-label=""/>
+
+                                    <select class="select2" name="sight_ids[{{ $topCity->id }}][]"
+                                            multiple="multiple"
+                                            data-placeholder="Select a Sight" style="width: 100%;">
+                                        @foreach($topCity->sights as $sight)
+                                        <option value="{{ $sight->id }}"
+                                                {{ $topCity->topSights->pluck('id')->contains($sight->id) ? 'selected' :
+                                            '' }}>
+                                            {{ $sight->translation('title') }}
+                                        </option>
+                                        @endforeach
+                                    </select>
+
+
+                                </td>
+                                <td>
+                                                        <textarea name="highlights[]"
+                                                                  placeholder="Enter content"
+                                                                  class="form-control"
+                                                                  aria-label="">{{ $topCity->translation('highlights') }}</textarea>
+                                </td>
+                                <td>
+                                    <button type="button"
+                                            class="w-100 btn btn-outline-danger remove-topcity-field">
+                                        Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            @endforeach
+
+                        </table>
+
+
+                        <div class="add-button">
+                            <select id="citySelect" class="form-control" style="width: fit-content">
+                                <option disabled selected>Select Top City</option>
+                                @foreach($cities as $city)
+                                <option
+                                        value="{{ $city->id }}">{{ $city->translation('title') }}
+                                </option>
+                                @endforeach
+                            </select>
+                            <button type="button" name="addTopCity" id="dynamic-ar-topcity"
+                                    style="width: fit-content;"
+                                    class="btn btn-outline-success">Add Top Cities Block
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tab-pane fade" id="custom-content-below-settings" role="tabpanel"
+                     aria-labelledby="custom-content-below-settings-tab">
+
+                    <div class="form-group row mb-4">
+                        <label class="col-sm-2 col-form-label text-right">SEO Title </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="seo_title"
+                                   value="{{ $country->seo_title  }}">
+                            @error('seo_title')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-sm-2 col-form-label text-right">SEO Description</label>
+                        <div class="col-sm-10">
+                                <textarea class="form-control message-box no-tinymce"
+                                          name="seo_descr">{{ $country->seo_descr}}</textarea>
+                            @error('seo_descr')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-sm-2 col-form-label text-right">Meta Keywords</label>
+                        <div class="col-sm-10">
+                                <textarea class="form-control message-box no-tinymce"
+                                          name="meta_keywords">{{ $country->meta_keywords }}</textarea>
+                            @error('meta_keywords')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="tab-custom-content">
+                <div class="row form-group">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-11">
+                        <input type="submit" class="btn btn-primary w-50" value="Edit country">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+
+
+
+<form action="{{ route('admin.countries.update', $country->id) }}" method="POST"
+      enctype="multipart/form-data">
+    @csrf
+    @method('PATCH')
+    <div class="row">
+        <div class="col-lg-12">
+
+
+            <div class="form-group row mb-2">
+                <label class="col-sm-2 col-form-label text-right"><p>
+                    <a class="btn btn-secondary" data-toggle="collapse"
+                       href="#collapseExample"
+                       role="button" aria-expanded="false" aria-controls="collapseExample">
+                        SEO Inputs
+                    </a>
+                </p>
+                </label>
+                <div class="col-sm-10">
+                    <hr class="border-5">
+                </div>
+            </div>
+
+            <div class="collapse" id="collapseExample">
+                <div class="form-group row mb-4">
+                    <label class="col-sm-2 col-form-label text-right">SEO Title </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="seo_title"
+                               value="{{ $country->seo_title  }}">
+                        @error('seo_title')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group row mb-4">
+                    <label class="col-sm-2 col-form-label text-right">SEO Description</label>
+                    <div class="col-sm-10">
+                                <textarea class="form-control message-box no-tinymce"
+                                          name="seo_descr">{{ $country->seo_descr}}</textarea>
+                        @error('seo_descr')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group row mb-4">
+                    <label class="col-sm-2 col-form-label text-right">Meta Keywords</label>
+                    <div class="col-sm-10">
+                                <textarea class="form-control message-box no-tinymce"
+                                          name="meta_keywords">{{ $country->meta_keywords }}</textarea>
+                        @error('meta_keywords')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group row mb-2">
+                <label class="col-sm-2 col-form-label text-right"><p>
+                    <a class="btn btn-secondary" data-toggle="collapse"
+                       href="#collapseTop"
+                       role="button" aria-expanded="false" aria-controls="collapseTop">
+                        Top Cities Informartion
+                    </a>
+                </p>
+                </label>
+                <div class="col-sm-10">
+                    <hr class="border-5">
+                </div>
+            </div>
+
+            <div class="collapse" id="collapseTop">
+
+
+                <div class="form-group row mb-4">
+                    <label class="col-sm-2 col-form-label text-right">Какое количество дней
+                        запланировать для путешествия по
+                        {{ $country->translation('name') }}?</label>
+                    <div class="col-sm-10">
+                                        <textarea class="form-control message-box"
+                                                  name="recommended_duration">{{ $country->recommended_duration}}</textarea>
+                        @error('recommended_duration')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <input type="text" id="cityTitle" hidden>
+                <input type="text" id="minDays" hidden>
+                <input type="text" id="highlights" hidden>
+                <select id="sights" hidden></select>
+
+
+
+                <div class="form-group row mb-4">
+
+                    <table class="row table table-bordered top_city" id="dynamicAddRemoveTopCity">
+                        <tr>
+                            <th>Title</th>
+                            <th>Content</th>
+                            <th>Content</th>
+                            <th>Action</th>
+                        </tr>
+                        @foreach($country->topCities as $index => $topCity)
+                        <tr>
+                            <td>
+                                <input type="text" name="cityId[]" value="{{ $topCity->id }}"
+                                       hidden>
+
+                                <input type="text" name="cityTitle[]"
+                                       placeholder="Enter title"
+                                       value="{{ $topCity->translation('title') }}"
+                                       class="form-control" aria-label=""/>
+                            </td>
+                            <td>
+                                <input type="text" name="minDays[]"
+                                       placeholder="Enter title"
+                                       value="{{ $topCity->translation('min_days') }}"
+                                       class="form-control" aria-label=""/>
+
+                                <select class="select2" name="sight_ids[{{ $topCity->id }}][]"
+                                        multiple="multiple"
+                                        data-placeholder="Select a Sight" style="width: 100%;">
+                                    @foreach($topCity->sights as $sight)
+                                    <option value="{{ $sight->id }}"
+                                            {{ $topCity->topSights->pluck('id')->contains($sight->id) ? 'selected' : '' }}>
+                                        {{ $sight->translation('title') }}
+                                    </option>
+                                    @endforeach
+                                </select>
+
+
+                            </td>
+                            <td>
+                                                        <textarea name="highlights[]"
+                                                                  placeholder="Enter content"
+                                                                  class="form-control"
+                                                                  aria-label="">{{ $topCity->translation('highlights') }}</textarea>
+                            </td>
+                            <td>
+                                <button type="button"
+                                        class="w-100 btn btn-outline-danger remove-topcity-field">
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                        @endforeach
+
+                    </table>
+
+
+                    <div class="add-button">
+                        <select id="citySelect" class="form-control" style="width: fit-content">
+                            <option disabled selected>Select Top City</option>
+                            @foreach($cities as $city)
+                            <option
+                                    value="{{ $city->id }}">{{ $city->translation('title') }}</option>
+                            @endforeach
+                        </select>
+                        <button type="button" name="addTopCity" id="dynamic-ar-topcity"
+                                style="width: fit-content;"
+                                class="btn btn-outline-success">Add Top Cities Block
+                        </button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="form-group row mb-4">
+                <label class="col-sm-1 col-form-label text-right">Title</label>
+                <div class="col-sm-11">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name"
+                               placeholder="Enter country name"
+                               value="{{ $country->translation('name') }}">
+                        @error('name')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row mb-4">
+                <label class="col-sm-1 col-form-label text-right">Content text
+                    for {{ $country->translation('name') }}</label>
+                <div class="col-sm-11">
+                                    <textarea class="form-control" placeholder="Enter content text for this country"
+                                              name="content">{{ isset($country->content) ?  ($country->translation('content')) : old('content') }}</textarea>
+                    @error('content')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
+            <div class="form-group row mb-5">
+                <label class="col-sm-1 col-form-label text-right">Why
+                    visit {{ $country->translation('name') }}</label>
+                <div class="col-sm-11">
+                                    <textarea class="form-control" placeholder="Enter why people visit this country"
+                                              name="why_visit">{{ isset($country->why_visit) ?  ($country->translation('why_visit')) : old('why_visit') }}</textarea>
+                    @error('why_visit')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
+            <div class="form-group row mb-4">
+                <label class="col-sm-1 col-form-label text-right">Services</label>
+                <div class="col-sm-11">
+                    <select class="select2" name="service_ids[]" multiple="multiple"
+                            data-placeholder="Select a Service" style="width: 100%;">
+                        @foreach($services as $service)
+                        <option value="{{ $service->id }}"
+                                {{ is_array( $country->services->pluck('id')->toArray() ) && in_array($service->id, $country->services->pluck('id')->toArray() ) ? 'selected' : '' }}>
+                            {{ $service->title }}
+                        </option>
+                        @endforeach
+                    </select>
+                    @error('service_ids')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
+            <div class="form-group row mb-4">
+
+                <label class="col-sm-1 col-form-label text-right">Preview Photo</label>
+                <div class="col-sm-11">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input image-input"
+                                   name="preview_image"
+                                   id="image-preview">
+                            <label class="custom-file-label">Choose image</label>
+                        </div>
+                        <div class="input-group-append">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                    </div>
+                    @error('preview_image')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                    <div id="images-preview-image">
+                        @if( isset($country->preview_image) )
+                        <img style="max-width: 190px;" class="mt-4 mx-2"
+                             src="{{ asset('storage/' . $country->preview_image) }}"
+                             alt="preview_image">
+                        @endif
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row mb-4">
+
+                <label class="col-sm-1 col-form-label text-right">Color Photo</label>
+                <div class="col-sm-5">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input image-input"
+                                   name="image_color"
+                                   id="image_color">
+                            <label class="custom-file-label">Choose image</label>
+                        </div>
+                        <div class="input-group-append">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                    </div>
+                    @error('image_color')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                    <div id="images-image_color">
+                        @if( isset($country->image_color) )
+                        <img style="max-width: 190px;" class="mt-4 mx-2"
+                             src="{{ asset('storage/' . $country->image_color) }}"
+                             alt="image_color">
+                        @endif
+                    </div>
+                </div>
+
+                <label class="col-sm-1 col-form-label text-right">Black Photo</label>
+                <div class="col-sm-5">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input image-input"
+                                   name="image_black"
+                                   id="image_black">
+                            <label class="custom-file-label">Choose image</label>
+                        </div>
+                        <div class="input-group-append">
+                            <span class="input-group-text">Upload</span>
+                        </div>
+                    </div>
+                    @error('image_black')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                    <div id="images-image_black">
+                        @if( isset($country->image_black) )
+                        <img style="max-width: 190px;" class="mt-4 mx-2"
+                             src="{{ asset('storage/' . $country->image_black) }}"
+                             alt="image_black">
+                        @endif
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group row mb-5">
+                <label class="col-sm-1 col-form-label text-right">Large Text
+                    About {{ $country->translation('name') }}</label>
+                <div class="col-sm-11">
+                                    <textarea class="form-control" placeholder="Enter Large Text About this country"
+                                              name="text_large">{{ isset($country->text_large) ?  ($country->translation('text_large')) : old('text_large') }}</textarea>
+                    @error('text_large')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+            <div class="form-group row mb-5">
+                <label class="col-sm-1 col-form-label text-right">Small Text
+                    About {{ $country->translation('name') }}</label>
+                <div class="col-sm-11">
+                                    <textarea class="form-control" placeholder="Enter Small Text About this country"
+                                              name="text_small">{{ isset($country->text_small) ?  ($country->translation('text_small')) : old('text_small') }}</textarea>
+                    @error('text_small')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
+            <div class="form-group row mb-4">
+                <label class="col-sm-1 col-form-label text-right">Rules</label>
+                <div class="col-sm-11" style="display: flex; flex-direction: row; width: 100%">
+
+                    <div class="ml-2" style="width: 50%;">
+                        <table class="row table table-bordered" id="dynamicAddRemoveObserve">
+                            <tr>
+                                <th>What to observe</th>
+                            </tr>
+                            @if(!empty($country->rules['observe']))
+                            @foreach($country->rules['observe'] as $index => $observe)
+                            <tr>
+                                <td>
+                                                            <textarea name="rules[observe][{{ $index }}]"
+                                                                      placeholder="Enter content"
+                                                                      class="form-control"
+                                                                      aria-label="">{{ $observe }}</textarea>
+                                </td>
+                                <td>
+                                    <button type="button"
+                                            class="w-100 btn btn-outline-danger remove-observe-field">
+                                        Remove
+                                    </button>
+
+                                </td>
+                            </tr>
+                            @endforeach
+                            @else
+                            <tr>
+                                <td>
+                                                    <textarea name="rules[observe][0]" placeholder="Enter content"
+                                                              class="form-control" aria-label=""></textarea>
+                                </td>
+                                <td>
+                                    <button type="button"
+                                            class="w-100 btn btn-outline-danger remove-observe-field">
+                                        Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            @endif
+                        </table>
+
+                        <div class="add-button">
+                            <button type="button" name="addObserve" id="dynamic-ar-observe"
+                                    class="btn btn-outline-success" style="width: fit-content">Add
+                                Observe Field
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="ml-2" style="width: 50%;">
+                        <table class="row table table-bordered" id="dynamicAddRemoveAvoid">
+                            <tr>
+                                <th>What to avoid</th>
+                            </tr>
+                            @if(!empty($country->rules['avoid']))
+                            @foreach($country->rules['avoid'] as $index => $avoid)
+                            <tr>
+                                <td>
+                                                        <textarea name="rules[avoid][{{ $index }}]"
+                                                                  placeholder="Enter content"
+                                                                  class="form-control"
+                                                                  aria-label="">{{ $avoid }}</textarea>
+                                </td>
+                                <td>
+                                    <button type="button"
+                                            class="w-100 btn btn-outline-danger remove-avoid-field">
+                                        Remove
+                                    </button>
+
+                                </td>
+                            </tr>
+                            @endforeach
+                            @else
+                            <tr>
+                                <td>
+                                                    <textarea name="rules[avoid][0]" placeholder="Enter content"
+                                                              class="form-control" aria-label=""></textarea>
+                                </td>
+                                <td>
+                                    <button type="button"
+                                            class="w-100 btn btn-outline-danger remove-avoid-field">
+                                        Remove
+                                    </button>
+                                </td>
+                            </tr>
+                            @endif
+                        </table>
+                        <div class="add-button">
+                            <button type="button" name="addAvoid" id="dynamic-ar-avoid"
+                                    class="btn btn-outline-success" style="width: fit-content">Add Avoid
+                                Field
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row form-group">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-11">
+                    <input type="submit" class="btn btn-primary w-50" value="Edit country">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+
+@extends('admin.layouts.main')
+
+
+
+@section('styles')
+
+<style>
+    tbody {
+        flex: 1;
+    }
+
+    tr {
+        display: flex;
+    }
+
+    tr th:first-child,
+    tr td:first-child {
+        width: 75%;
+    }
+
+    tr th:nth-child(2),
+    tr td:nth-child(2) {
+        width: 25%;
+    }
+
+
+    textarea {
+        /* box-sizing: padding-box; */
+        overflow: hidden;
+        /* demo only: */
+        padding: 10px;
+        border-radius: 10px;
+        border: 6px solid #556677;
+    }
+</style>
+@endsection
+
+
+@section('content')
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6 mt-3">
+                    <h1 class="m-0">Edit Country</h1>
+
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content p-0">
+        <div class="container-fluid mt-2 p-0">
+
+
+            <form action="{{ route('admin.countries.update', $country->id) }}" method="POST"
+                  enctype="multipart/form-data">
+                @csrf
+                @method('PATCH')
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="nav nav-tabs link-text" id="custom-content-below-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill"
+                                   href="#custom-content-below-home" role="tab"
+                                   aria-controls="custom-content-below-home"
+                                   aria-selected="true">SEO Inputs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill"
+                                   href="#custom-content-below-profile" role="tab"
+                                   aria-controls="custom-content-below-profile"
+                                   aria-selected="false">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill"
+                                   href="#custom-content-below-messages" role="tab"
+                                   aria-controls="custom-content-below-messages"
+                                   aria-selected="false">Top Cities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="custom-content-below-settings-tab" data-toggle="pill"
+                                   href="#custom-content-below-settings" role="tab"
+                                   aria-controls="custom-content-below-settings"
+                                   aria-selected="false">SEO Inputs</a>
+                            </li>
+                        </ul>
+
+
+                        <div class="tab-content" id="custom-content-below-tabContent">
+
+                            <div class="tab-pane fade show active" id="custom-content-below-home" role="tabpanel"
+                                 aria-labelledby="custom-content-below-home-tab">
+
+
+                                <div class="form-group mb-4">
+                                    <label>Title</label>
+                                    <div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name"
+                                                   placeholder="Enter country name"
+                                                   value="{{ $country->translation('name') }}">
+                                            @error('name')
+                                            <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-4">
+                                    <label>Content text
+                                        for {{ $country->translation('name') }}</label>
+                                    <div>
+                                    <textarea class="form-control" placeholder="Enter content text for this country"
+                                              name="content">{{ isset($country->content) ?  ($country->translation('content')) : old('content') }}</textarea>
+                                        @error('content')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group mb-5">
+                                    <label>Why
+                                        visit {{ $country->translation('name') }}</label>
+                                    <div>
+                                    <textarea class="form-control" placeholder="Enter why people visit this country"
+                                              name="why_visit">{{ isset($country->why_visit) ?  ($country->translation('why_visit')) : old('why_visit') }}</textarea>
+                                        @error('why_visit')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group mb-4">
+                                    <label>Services</label>
+                                    <div>
+                                        <select class="select2" name="service_ids[]" multiple="multiple"
+                                                data-placeholder="Select a Service" style="width: 100%;">
+                                            @foreach($services as $service)
+                                            <option value="{{ $service->id }}"
+                                                    {{ is_array( $country->services->pluck('id')->toArray() ) &&
+                                                in_array($service->id, $country->services->pluck('id')->toArray() ) ? 'selected' :
+                                                '' }}>
+                                                {{ $service->title }}
+                                            </option>
+                                            @endforeach
+                                        </select>
+                                        @error('service_ids')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group mb-5">
+                                    <label>Large Text
+                                        About {{ $country->translation('name') }}</label>
+                                    <div>
+                                    <textarea class="form-control" placeholder="Enter Large Text About this country"
+                                              name="text_large">{{ isset($country->text_large) ?  ($country->translation('text_large')) : old('text_large') }}</textarea>
+                                        @error('text_large')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group mb-5">
+                                    <label>Small Text
+                                        About {{ $country->translation('name') }}</label>
+                                    <div>
+                                    <textarea class="form-control" placeholder="Enter Small Text About this country"
+                                              name="text_small">{{ isset($country->text_small) ?  ($country->translation('text_small')) : old('text_small') }}</textarea>
+                                        @error('text_small')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group mb-4">
+                                    <label>Rules</label>
+                                    <div class="col-sm-12" style="display: flex; flex-direction: row; width: 100%">
+
+                                        <div style="width: 50%;">
+                                            <table class="row table table-bordered" id="dynamicAddRemoveObserve">
+                                                <tr>
+                                                    <th>What to observe</th>
+                                                </tr>
+                                                @if(!empty($country->rules['observe']))
+                                                @foreach($country->rules['observe'] as $index => $observe)
+                                                <tr>
+                                                    <td>
+                                                            <textarea name="rules[observe][{{ $index }}]"
+                                                                      placeholder="Enter content"
+                                                                      class="form-control"
+                                                                      aria-label="">{{ $observe }}</textarea>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button"
+                                                                class="w-100 btn btn-outline-danger remove-observe-field">
+                                                            Remove
+                                                        </button>
+
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                                @else
+                                                <tr>
+                                                    <td>
+                                                    <textarea name="rules[observe][0]" placeholder="Enter content"
+                                                              class="form-control" aria-label=""></textarea>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button"
+                                                                class="w-100 btn btn-outline-danger remove-observe-field">
+                                                            Remove
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                @endif
+                                            </table>
+
+                                            <div class="add-button">
+                                                <button type="button" name="addObserve" id="dynamic-ar-observe"
+                                                        class="btn btn-outline-success" style="width: fit-content">
+                                                    Add
+                                                    Observe Field
+                                                </button>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="ml-2" style="width: 50%;">
+                                            <table class="row table table-bordered" id="dynamicAddRemoveAvoid">
+                                                <tr>
+                                                    <th>What to avoid</th>
+                                                </tr>
+                                                @if(!empty($country->rules['avoid']))
+                                                @foreach($country->rules['avoid'] as $index => $avoid)
+                                                <tr>
+                                                    <td>
+                                                        <textarea name="rules[avoid][{{ $index }}]"
+                                                                  placeholder="Enter content"
+                                                                  class="form-control"
+                                                                  aria-label="">{{ $avoid }}</textarea>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button"
+                                                                class="w-100 btn btn-outline-danger remove-avoid-field">
+                                                            Remove
+                                                        </button>
+
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                                @else
+                                                <tr>
+                                                    <td>
+                                                    <textarea name="rules[avoid][0]" placeholder="Enter content"
+                                                              class="form-control" aria-label=""></textarea>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button"
+                                                                class="w-100 btn btn-outline-danger remove-avoid-field">
+                                                            Remove
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                @endif
+                                            </table>
+                                            <div class="add-button">
+                                                <button type="button" name="addAvoid" id="dynamic-ar-avoid"
+                                                        class="btn btn-outline-success" style="width: fit-content">
+                                                    Add Avoid
+                                                    Field
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel"
+                                 aria-labelledby="custom-content-below-profile-tab">
+                                <div class="form-group mb-4">
+
+                                    <label>Preview Photo</label>
+                                    <div>
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input image-input"
+                                                       name="preview_image"
+                                                       id="image-preview">
+                                                <label class="custom-file-label">Choose image</label>
+                                            </div>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">Upload</span>
+                                            </div>
+                                        </div>
+                                        @error('preview_image')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                        <div id="images-preview-image">
+                                            @if( isset($country->preview_image) )
+                                            <img style="max-width: 190px;" class="mt-4 mx-2"
+                                                 src="{{ asset('storage/' . $country->preview_image) }}"
+                                                 alt="preview_image">
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-4">
+
+                                    <div class="col-sm-6">
+                                        <label>Color Photo</label>
+                                        <div>
+                                            <div class="input-group">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input image-input"
+                                                           name="image_color"
+                                                           id="image_color">
+                                                    <label class="custom-file-label">Choose image</label>
+                                                </div>
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">Upload</span>
+                                                </div>
+                                            </div>
+                                            @error('image_color')
+                                            <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                            <div id="images-image_color">
+                                                @if( isset($country->image_color) )
+                                                <img style="max-width: 190px;" class="mt-4 mx-2"
+                                                     src="{{ asset('storage/' . $country->image_color) }}"
+                                                     alt="image_color">
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Black Photo</label>
+                                        <div>
+                                            <div class="input-group">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input image-input"
+                                                           name="image_black"
+                                                           id="image_black">
+                                                    <label class="custom-file-label">Choose image</label>
+                                                </div>
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">Upload</span>
+                                                </div>
+                                            </div>
+                                            @error('image_black')
+                                            <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                            <div id="images-image_black">
+                                                @if( isset($country->image_black) )
+                                                <img style="max-width: 190px;" class="mt-4 mx-2"
+                                                     src="{{ asset('storage/' . $country->image_black) }}"
+                                                     alt="image_black">
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="tab-pane fade" id="custom-content-below-messages" role="tabpanel"
+                                 aria-labelledby="custom-content-below-messages-tab">
+
+                                <div class="form-group mb-4">
+                                    <label>Какое количество дней
+                                        запланировать для путешествия по
+                                        {{ $country->translation('name') }}?</label>
+                                    <div>
+                                        <textarea class="form-control message-box"
+                                                  name="recommended_duration">{{ $country->recommended_duration}}</textarea>
+                                        @error('recommended_duration')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <input type="text" id="cityTitle" hidden>
+                                <input type="text" id="minDays" hidden>
+                                <input type="text" id="highlights" hidden>
+                                <select id="sights" hidden></select>
+
+
+                                <div class="col-sm-12">
+
+                                    <table class="row table table-bordered top_city" id="dynamicAddRemoveTopCity">
+                                        <tr>
+                                            <th>Title</th>
+                                            <th>Content</th>
+                                            <th>Content</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        @foreach($country->topCities as $index => $topCity)
+                                        <tr>
+                                            <td>
+                                                <input type="text" name="cityId[]" value="{{ $topCity->id }}"
+                                                       hidden>
+
+                                                <input type="text" name="cityTitle[]"
+                                                       placeholder="Enter title" disabled
+                                                       value="{{ $topCity->translation('title') }}"
+                                                       class="form-control" aria-label=""/>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="minDays[]"
+                                                       placeholder="Enter title"
+                                                       value="{{ $topCity->translation('min_days') }}"
+                                                       class="form-control mb-2" aria-label=""/>
+
+                                                <select class="select2" name="sight_ids[{{ $topCity->id }}][]"
+                                                        multiple="multiple"
+                                                        data-placeholder="Select a Sight" style="width: 100%;">
+                                                    @foreach($topCity->sights as $sight)
+                                                    <option value="{{ $sight->id }}"
+                                                            {{ $topCity->topSights->pluck('id')->contains($sight->id) ? 'selected' :
+                                                        '' }}>
+                                                        {{ $sight->translation('title') }}
+                                                    </option>
+                                                    @endforeach
+                                                </select>
+
+
+                                            </td>
+                                            <td>
+                                                        <textarea name="highlights[]"
+                                                                  placeholder="Enter content"
+                                                                  class="form-control"
+                                                                  aria-label="">{{ $topCity->translation('highlights') }}</textarea>
+                                            </td>
+                                            <td>
+                                                <button type="button"
+                                                        class="w-100 btn btn-outline-danger remove-topcity-field">
+                                                    Remove
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+
+                                    </table>
+
+
+                                    <div class="add-button">
+                                        <select id="citySelect" class="form-control" style="width: fit-content">
+                                            <option disabled selected>Select Top City</option>
+                                            @foreach($cities as $city)
+                                            <option
+                                                    value="{{ $city->id }}">{{ $city->translation('title') }}
+                                            </option>
+                                            @endforeach
+                                        </select>
+                                        <button type="button" name="addTopCity" id="dynamic-ar-topcity"
+                                                style="width: fit-content;"
+                                                class="btn btn-outline-success">Add Top Cities Block
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="tab-pane fade" id="custom-content-below-settings" role="tabpanel"
+                                 aria-labelledby="custom-content-below-settings-tab">
+
+                                <div class="form-group mb-4">
+                                    <label>SEO Title </label>
+                                    <div>
+                                        <input type="text" class="form-control" name="seo_title"
+                                               value="{{ $country->seo_title  }}" aria-label="">
+                                        @error('seo_title')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label>SEO Description</label>
+                                    <div>
+                                           <textarea class="form-control message-box no-tinymce" aria-label=""
+                                                     name="seo_descr">{{ $country->seo_descr}}</textarea>
+                                        @error('seo_descr')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label>Meta Keywords</label>
+                                    <div>
+                                              <textarea class="form-control message-box no-tinymce" aria-label=""
+                                                        name="meta_keywords">{{ $country->meta_keywords }}</textarea>
+                                        @error('meta_keywords')
+                                        <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tab-custom-content">
+                            <div class="form-group">
+                                <div>
+                                    <input type="submit" class="btn btn-primary w-50" value="Edit country">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+@endsection
+
+
+@section('scripts')
+
+<script>
+    $(document).ready(function () {
+        $(document).on('keydown', 'textarea', function () {
+            var el = this;
+            setTimeout(function () {
+                el.style.cssText = 'height:auto; padding:10px';
+                el.style.cssText = 'height:' + el.scrollHeight + 'px';
+            }, 0);
+        });
+    });
+</script>
+
+
+<script>
+    $(function () {
+        var previewImages = function (input, imgPreviewPlaceholder) {
+            $(imgPreviewPlaceholder).empty();
+            if (input.files) {
+                var filesAmount = input.files.length;
+                for (i = 0; i < filesAmount; i++) {
+                    var reader = new FileReader();
+                    reader.onload = function (event) {
+                        $($.parseHTML('<img style="max-width: 190px;" class="mt-4 mx-2">'))
+                            .attr('src', event.target.result)
+                            .appendTo(imgPreviewPlaceholder);
+                    }
+                    reader.readAsDataURL(input.files[i]);
+                }
+            }
+        };
+
+        $(document).on('change', '.image-input', function () {
+            // Get the id of the input element and use it to create the id of the preview placeholder
+            var inputId = this.id;
+            var previewPlaceholderId = '#images-' + inputId;
+            previewImages(this, previewPlaceholderId);
+        });
+    });
+
+</script>
+
+
+<script>
+
+    $(document).ready(function () {
+        var addedCities = [];  // Массив для отслеживания добавленных городов
+    @foreach($country->topCities as $topCity)
+        addedCities.push({{ $topCity->id }});  // Заполняем его изначальными значениями
+        @endforeach
+
+        function updateCityOptions() {
+            $('#citySelect option').each(function () {
+                var cityId = $(this).val();
+                if (addedCities.includes(parseInt(cityId))) {
+                    $(this).prop('disabled', true);
+                } else {
+                    $(this).prop('disabled', false);
+                }
+            });
+        }
+
+        updateCityOptions();
+
+
+        $("#dynamic-ar-topcity").prop("disabled", true); // Отключаем кнопку по умолчанию
+
+        $("#citySelect").change(function () {
+
+            $("#dynamic-ar-topcity").prop("disabled", false);
+
+        });
+
+
+        $("#dynamic-ar-topcity").click(function () {
+            var cityId = parseInt($("#citySelect").val()); // Получаем выбранное значение из select
+            if (addedCities.includes(cityId)) {
+                $("#dynamic-ar-topcity").prop("disabled", true);
+                return;
+            }
+
+            addedCities.push(cityId);
+            updateCityOptions();
+
+            $.ajax({
+                url: '/admin/get-city-data/' + cityId,
+                method: 'GET',
+                success: function (data) {
+                    // Записываем полученные данные в элементы формы
+                    $("#minDays").val(data.min_days);
+                    $("#highlights").val(data.highlights);
+                    $("#cityTitle").val(data.title);
+
+                    if (Array.isArray(data.topSights)) {
+                        var topSightIds = data.topSights.map(function (topSight) {
+                            return topSight.id;
+                        });
+
+                        var sightOptions = data.sights.map(function (sight) {
+                            var selected = topSightIds.includes(sight.id) ? 'selected' : '';
+                            return '<option value="' + sight.id + '" ' + selected + '>' + sight.title + '</option>';
+                        }).join('');
+
+                        $("#sights").html(sightOptions);
+                    }
+                    console.log(data.sights);
+                    console.log(data.topSights);
+
+                    $("#sights").html(sightOptions);
+                },
+                error: function (request, status, error) {
+                    console.log("Request: " + JSON.stringify(request));
+                    console.log("Status: " + status);
+                    console.log("Error: " + error);
+                }
+            }).done(function () {
+                // После того как AJAX запрос выполнен и данные записаны, мы можем их использовать
+                var minDays = $("#minDays").val();
+                var highlights = $("#highlights").val();
+                var cityTitle = $("#cityTitle").val();
+                var sightOptions = $("#sights").html();
+
+                console.log(sightOptions)
+
+                $("#dynamicAddRemoveTopCity").append('' +
+                    '<tr>' +
+                    '<td>' +
+                    '<input type="text" name="cityId[]" value="' + cityId + '" hidden class="form-control" />' +
+                    '<input type="text" name="cityTitle[]" value="' + cityTitle + '" class="form-control" />' +
+                    '</td>' +
+                    '<td>' +
+                    '<input type="text" name="minDays[]" value="' + minDays + '" class="form-control" />' +
+                    '<select class="select2" name="sight_ids[' + cityId + '][]" multiple="multiple" data-placeholder="Select a Sight" style="width: 100%;">' +
+                    sightOptions +
+                    '</select>' +
+                    '</td>' +
+                    '<td>' +
+                    '<textarea type="text" name="highlights[]" class="form-control">' + highlights + '</textarea>' +
+                    '</td>' +
+                    '<td>' +
+                    '<button type="button" class="w-100 btn btn-outline-danger remove-topcity-field">Remove</button>' +
+                    '</td>' +
+                    '</tr>'
+                );
+                initTinymce();
+
+                $('.select2').select2();
+                initTinymce();
+                $("#dynamic-ar-topcity").prop("disabled", true); // Отключаем кнопку, если выбранный элемент отключен
+
+            });
+
+        });
+
+        $(document).on('click', '.remove-topcity-field', function () {
+            var cityId = parseInt($(this).parents('tr').find('input[name="cityId[]"]').val());
+            $(this).parents('tr').remove();
+            addedCities = addedCities.filter(function (value, index, arr) {
+                return value !== cityId;
+            });
+            updateCityOptions();
+
+            var selectedOptionValue = $("#citySelect").val();
+            var selectedOption = $('#citySelect option[value="' + selectedOptionValue + '"]');
+            console.log("**********************")
+            console.log(selectedOptionValue)
+            console.log(selectedOption)
+            console.log(selectedOption.is(':disabled'))
+            console.log("**********************")
+            if (selectedOptionValue === null) {
+                $("#dynamic-ar-topcity").prop("disabled", true);
+            } else {
+                $("#dynamic-ar-topcity").prop("disabled", false);
+            }
+
+        });
+    });
+
+</script>
+
+
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#dynamic-ar-observe").click(function () {
+            var rowCount = new Date().getTime();
+            $("#dynamicAddRemoveObserve").append('' +
+                '<tr>' +
+
+                '<td>' +
+                '<textarea type="text" name="rules[observe][' + rowCount +
+                ']" placeholder="Enter content" class="form-control"></textarea>' +
+                '</td>' +
+
+                '<td>' +
+                '<button type="button" class="w-100 btn btn-outline-danger remove-observe-field">Remove</button>' +
+                '</td>' +
+
+                '</tr>'
+            );
+
+            initTinymce();
+        });
+
+
+        $(document).on('click', '.remove-observe-field', function () {
+            $(this).parents('tr').remove();
+        });
+    });
+
+</script>
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#dynamic-ar-avoid").click(function () {
+            var rowCount = new Date().getTime();
+            $("#dynamicAddRemoveAvoid").append('' +
+                '<tr>' +
+
+                '<td>' +
+                '<textarea type="text" name="rules[avoid][' + rowCount +
+                ']" placeholder="Enter content" class="form-control"></textarea>' +
+                '</td>' +
+
+                '<td>' +
+                '<button type="button" class="w-100 btn btn-outline-danger remove-avoid-field">Remove</button>' +
+                '</td>' +
+
+                '</tr>'
+            );
+
+            initTinymce();
+        });
+
+
+        $(document).on('click', '.remove-avoid-field', function () {
+            $(this).parents('tr').remove();
+        });
+    });
+
+</script>
+
+@endsection
+okay teper nado request, i store controller krasivo organizovat: vnizu ya dala tebe otnosheniya ix. kak vidish zdes dva pivot table. a takje zdes pryamo u vibrannix cities, menyayut neskolko yego columnov. to est ne tolko modelka country, no i city toj menayyetsya.
+
+//////////eto to kakiye danniye mne prixodyat:
+"city" => array:4 [▼
+"cityId" => array:3 [▼
+0 => "2"
+1 => "6"
+2 => "3"
+]
+"minDays" => array:3 [▼
+0 => "1-2 дня"
+1 => "1-2 дня"
+2 => "1-2 дня"
+]
+"sight_ids" => array:3 [▼
+2 => array:2 [▶]
+6 => array:3 [▶]
+3 => array:2 [▶]
+]
+"highlights" => array:3 [▼
+0 => "<p>Amir khan, Registan</p>"
+1 => "<p>Lorem Ipsum</p>"
+2 => "<p>Amir khan, Registan, Lorem Ipsum</p>"
+]
+]
+]
+
+///////////eto moy blade.php:
+
+@foreach($country->topCities as $index => $topCity)
+<tr>
+    <td>
+        <input type="text" name="city[cityId][]" value="{{ $topCity->id }}"
+               hidden>
+        <label>Название Города</label>
+        <input type="text" name="city[cityTitle][]"
+               placeholder="Enter title" disabled
+               value="{{ $topCity->translation('title') }}"
+               class="form-control" aria-label=""/>
+    </td>
+    <td>
+        <label>Минимальное количество дней</label>
+        <input type="text" name="city[minDays][]"
+               placeholder="1-2 дня"
+               value="{{ $topCity->translation('min_days') }}"
+               class="form-control mb-2" aria-label=""/>
+
+        <label>Основные достопримечательности</label>
+        <select class="select2" name="city[sight_ids][{{ $topCity->id }}][]"
+                multiple="multiple"
+                data-placeholder="Select a Sight" style="width: 100%;">
+            @foreach($topCity->sights as $sight)
+            <option value="{{ $sight->id }}"
+                    {{ $topCity->topSights->pluck('id')->contains($sight->id) ? 'selected' :
+                '' }}>
+                {{ $sight->translation('title') }}
+            </option>
+            @endforeach
+        </select>
+
+
+    </td>
+    <td>
+        <label>Что интерсного? Расскажите</label>
+        <textarea name="city[highlights][]"
+                  placeholder="Enter content"
+                  class="form-control"
+                  aria-label="">{{ $topCity->translation('highlights') }}</textarea>
+    </td>
+    <td>
+        <button type="button"
+                class="w-100 btn btn-outline-danger remove-topcity-field">
+            Remove
+        </button>
+    </td>
+</tr>
+@endforeach
+
+/////////////eto otnosheniya
+
+class Country extends Model implements LocalizedUrlRoutable
+{
+public function topCities(): BelongsToMany
+{
+return $this->belongsToMany(City::class);
+}}
+
+/////
+class City extends Model implements LocalizedUrlRoutable
+{
+public function topCountries(): BelongsToMany
+{
+return $this->belongsToMany(Country::class);
+}
+
+public function topSights(): BelongsToMany
+{
+return $this->belongsToMany(Sight::class);
+}
+
+}
+//////////
+class Sight extends Model implements LocalizedUrlRoutable
+{
+public function topCities(): BelongsToMany
+{
+return $this->belongsToMany(City::class);
+}
+}
+///////////
+
+class TopCity extends Model
+{
+use HasFactory;
+
+protected $table = 'top_cities';
+protected $guarded = false;
+}
+class TopSight extends Model
+{
+use HasFactory;
+protected $table = 'top_sights';
+protected $guarded = false;
+}
+
+
+/////////////
+na osnove etogo , mojesh mne skazat kak bi luchshe bilo bi ix name davat, chtob ne bilo karmasiklik.  i kak mne postupit v controllere, s pivot tales?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

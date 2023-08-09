@@ -1,0 +1,70 @@
+array: [
+"_token" => "fGBXec7mVKjToSduJCl98uu3hVTpNSsnT6eZChfH"
+"_method" => "PATCH"
+"name" => "Узбекистан"
+"content" => "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when ▶"
+"why_visit" => "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when ▶"
+"text_large" => "<p>Узбекистан славится своими великолепными древними городами вдоль Великого Шелкового пути, такими как Самарканд, Бухара и Хива. Здесь можно окунуться в атмосф ▶"
+"text_small" => "<p>Знаменит своими древними городами, такими как Самарканд и Бухара, и гостеприимством местного населения. Узбекистан насчитывает около 33 миллионов жителей.</p ▶"
+"recommended_duration" => "<p>Какое количество дней запланировать для путешествия по Узбекистан?</p>"
+"seo_title" => "Незабываемые Туры по Узбекистану | Путешествуйте с нами по Средней Азии""
+"seo_descr" => "Незабываемые Туры по Узбекистану | Путешествуйте с нами по Средней Азии""
+"meta_keywords" => "Незабываемые Туры по Узбекистану | Путешествуйте с нами по Средней Азии""
+"service_ids" => array: 1
+"rules" => array: 2
+"city" => array: 5 [
+2 => array: 4 [
+"id" => "2"
+"min_days" => "1-2 дня"
+"sight_ids" => array: 1 [
+2 => array: 1 [
+"id" => "39"
+]
+]
+"highlights" => "<p>Amir khan, Registan</p>"
+]
+6 => array: 4 [
+"id" => "6"
+"min_days" => "1-2 дня"
+"sight_ids" => array: 1 [
+6 => array: 1 [
+"id" => "271"
+]
+]
+"highlights" => "<p>Lorem Ipsum</p>"
+]
+1 => array: 5 [
+"id" => "1"
+"cityTitle" => "Samarkand"
+"minDays" => "7-3 дня"
+"sight_ids" => array: 1 [
+1 => array: 1 [
+"id" => "3"
+]
+]
+"highlights" => "<p>Lorem Ipsum, Расскажите</p>"
+]
+4 => array: 5 [
+"id" => "4"
+"cityTitle" => "Khiva"
+"minDays" => "2-3 дня"
+"sight_ids" => array: 1 [
+4 => array: 1 [
+"id" => "194"
+]
+]
+"highlights" => "<p>Amir khan, Registan</p>"
+]
+11 => array: 5 [
+"id" => "11"
+"cityTitle" => "Termez"
+"minDays" => "2-8 дня"
+"sight_ids" => array: 1 [
+11 => array: 1 [
+"id" => "335"
+]
+]
+"highlights" => "<p>Что интерсного? Расскажите</p>"
+]
+]
+]
