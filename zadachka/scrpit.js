@@ -4,13 +4,25 @@ var $openLevel = $('.js-openLevel');
 var $closeLevel = $('.js-closeLevel');
 var $closeLevelTop = $('.js-closeLevelTop');
 var $navLevel = $('.js-pushNavLevel');
-var $breadcrumb = $('.breadcrumb');
+
+function updateBreadcrumbs(level) {
+    var breadcrumbs = [];
+    level.parentsUntil($topNav, $navLevel).each(function() {
+        var openLevel = $(this).find('> .js-openLevel').text().trim();
+        breadcrumbs.unshift(openLevel);
+    });
+
+    var $breadcrumbList = level.find('> .breadcrumb');
+    $breadcrumbList.empty();
+    breadcrumbs.forEach(function(crumb) {
+        var $crumbElement = $('<li></li>').text(crumb);
+        $breadcrumbList.append($crumbElement);
+    });
+}
 
 function openPushNav() {
     $topNav.addClass('isOpen');
     $('body').addClass('pushNavIsOpen');
-    $breadcrumb.empty();
-    $breadcrumb.append('<li><a href="#" class="js-closeLevelTop">Close</a></li>');
 }
 
 function closePushNav() {
@@ -29,26 +41,45 @@ $menuTrigger.on('click touchstart', function(e) {
 });
 
 $openLevel.on('click touchstart', function(){
-    $(this).next($navLevel).addClass('isOpen');
-    $breadcrumb.append('<li><a href="#" class="breadcrumb-link">' + $(this).text().trim() + '</a></li>');
-    $('.breadcrumb-link').on('click', function(e) {
-        e.preventDefault();
-        var index = $(this).parent().index();
-        $breadcrumb.children().slice(index + 1).remove();
-        $openLevel.siblings().slice(index).removeClass('isOpen');
-    });
+    var $nextLevel = $(this).next($navLevel);
+    $nextLevel.addClass('isOpen');
+    updateBreadcrumbs($nextLevel);
 });
 
 $closeLevel.on('click touchstart', function(){
-    var index = $(this).closest($navLevel).index('.js-pushNavLevel');
-    $breadcrumb.children().slice(index + 1).remove();
-    $(this).closest($navLevel).removeClass('isOpen');
+    var $currentLevel = $(this).closest($navLevel);
+    $currentLevel.removeClass('isOpen');
 });
 
 $closeLevelTop.on('click touchstart', function(){
     closePushNav();
 });
 
-$('.screen').click(function() {
-    closePushNav();
+
+$openLevel.on('click touchstart', function(){
+    var $thisNav = $(this).next($navLevel);
+    $thisNav.addClass('isOpen');
+    var breadcrumbs = [];
+    var parent = $(this);
+
+    while (parent.length > 0) {
+        var crumbText = parent.text().trim();
+        var crumb = $('<a>').text(crumbText).attr('href', '#').addClass('breadcrumb-item');
+        (function($navLevel){
+            crumb.on('click', function(e) {
+                e.preventDefault();
+                $('.pushNav_level').removeClass('isOpen');
+                $navLevel.addClass('isOpen');
+            });
+        })($thisNav);
+        breadcrumbs.unshift(crumb);
+        parent = parent.closest('.pushNav_level').prev('.js-openLevel');
+    }
+
+    var $breadcrumbList = $thisNav.find('ul.breadcrumb').first();
+    $breadcrumbList.empty();
+    $.each(breadcrumbs, function(index, crumb) {
+        var li = $('<li>').append(crumb);
+        $breadcrumbList.append(li);
+    });
 });
