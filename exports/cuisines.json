@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Pilav",
+    "content": "Pilaf is a national dish of Uzbekistan that is cooked from rice, carrot and meat. Depending on the region of Uzbekistan such components as peas, garlic, barberries, quince, dried apricots and raisins are added to this delicious Uzbek national dish. Traditionally Uzbek pilaf is  served hot on a large dish. Pilaf is washed down with tea, eaten with salads. Sometimes pilaf is eaten with patyr (type of Uzbek bread). But such eating is for rare eater. \r\nThe main difference from other PILAV dishes is not the composition of the products but the technology of preparation. Depending on the method of preparation, pilaf is always different, but equally delicious.",
+    "images": ["images/jdRiXNb6pcn1wZ41ImvsaelPKgj00L5D5yNnzGZU.jpg", "images/DHZFgOauZNhX7tKdd6mPZLXBxoIBV9sr9VyXwkW3.jpg", "images/u7Hln26BF8C7TrdBNfEr0ONNXSK51BwFzfX0nXxp.jpg"],
+    "country_id": 1,
+    "created_at": "2023-07-19 09:25:06",
+    "updated_at": "2023-07-21 03:55:10",
+    "slug": "pilav",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null,
+    "preview_image": "images/AGngEfqhfmo4yapY2LqNBgMdWeGba4buyRquwFgh.png"
+  },
+  {
+    "id": 3,
+    "title": "Pilaf",
+    "content": "Pilaf is a national dish of Uzbekistan that is cooked from rice, carrot and meat. Depending on the region of Uzbekistan such components as peas, garlic, barberries, quince, dried apricots and raisins are added to this delicious Uzbek national dish. Traditionally Uzbek pilaf is served hot on a large dish. Pilaf is washed down with tea, eaten with salads. Sometimes pilaf is eaten with patyr (type of Uzbek bread). But such eating is for rare eater. \r\nThe main difference from other pilaf dishes is not the composition of the products but the technology of preparation. Depending on the method of preparation, pilaf is always different, but equally delicious.",
+    "images": ["images/x1zVyeXP4cuqONkCUKLZORQssBjoI0YS01RIc5bK.jpg", "images/lqsJZyQpzTTYXUH02eClOtlg0yyUrhR8vetOQ7C6.jpg", "images/5Qjp0U2cXHH1doAYrQWZS8i2HCJDEHAXeVZNybFm.jpg"],
+    "country_id": 2,
+    "created_at": "2023-07-21 03:56:59",
+    "updated_at": "2023-07-21 03:56:59",
+    "slug": "pilaf",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null,
+    "preview_image": "images/gDuHUQd1qMr5FFzmQhyBAr57yiLfg6Pgk671Ba3O.png"
+  },
+  {
+    "id": 4,
+    "title": "Samsa",
+    "content": "Samsa is considered a separate traditional Uzbek dish of flour, which the Uzbek people can cook almost from any product, depending on the season. But traditionally Uzbek samsa is baked from flavour with different kinds of meat.\r\nTraditional Uzbek samsa is cooked in tandyr (Central Asian stove). But there is also a kind of samsa (usually triangular and square shape), which is prepared in the electric and gas ovens.\r\nIt is amazing, but, samsa is considered to be an absolutely correct dish, cause it is steamed in tandyr, without frying, that makes samsa health food. The natural fat in samsa is the most \"useful\" cholesterol, which makes our blood vessels strong.",
+    "images": ["images/SmzmSenJw0m6hnIsVZbToWIz1rMbq8IQlcsee9bx.jpg", "images/Jz5zC4rzo44dPG3WnbP1X86r1bS6ylHlR5q92NwO.jpg", "images/xu0yAvxKSmhCE4vB78OzImr5ARXgNwYUM2n4d1FA.png"],
+    "country_id": 2,
+    "created_at": "2023-07-21 03:57:19",
+    "updated_at": "2023-07-21 03:57:19",
+    "slug": "samsa",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null,
+    "preview_image": "images/iTJKyYDyv8HiU6Cw53nRTiWRGkb6IysuJBpuhrAY.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Shashlik",
+    "content": "Talking about shashlik one immediately imagines sappy flavoured meat on the skewer. The traditional Uzbek shashlik is cooked from mutton, but it also can be prepared from beef, poultry, chicken and fish. This dish is very delicious and nourishing at the same time. \r\nAlmost in every café, restaurant or even chaykhona (traditional Uzbek place for drinking tea) you may taste shashlik. Preparing shashlik is very delicate work, and exactly in Uzbekistan you may enjoy the unforgettable taste of Uzbek national dish - shashlik.",
+    "images": ["images/sEzHPpPAGtXqwOgZAMPzK9e4e47ZzQi36cTZ761d.jpg", "images/vFCidupp48YTrIEVqBt9gTIoBwykjjhL3WrhUUnE.jpg", "images/gp58H2BeO3tonCDAhOO2QCEQkQR8ANAcW2ycS97U.jpg"],
+    "country_id": 2,
+    "created_at": "2023-07-21 03:57:49",
+    "updated_at": "2023-07-21 03:57:49",
+    "slug": "shashlik",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null,
+    "preview_image": "images/k434MokCkKGZ0uPICaycKFvcvRsfcsX9sCY7lteh.jpg"
+  }
+]

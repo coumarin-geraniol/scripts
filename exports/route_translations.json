@@ -1,0 +1,362 @@
+[
+  {
+    "id": 3,
+    "route_id": 4,
+    "locale": "ru",
+    "name": "Нукус",
+    "details": "Прибытие в Нукус, размещение в гостинице. Возможность посещения музея им. Игоря Савицкого, городского рынка и главной площади.",
+    "placement": "Гостиница",
+    "created_at": "2023-06-20 11:32:56",
+    "updated_at": "2023-06-20 11:32:56"
+  },
+  {
+    "id": 4,
+    "route_id": 5,
+    "locale": "ru",
+    "name": "Аральское море",
+    "details": "Путешествие к Аральскому морю, размещение в палатках.",
+    "placement": "Палатка",
+    "created_at": "2023-06-20 11:32:56",
+    "updated_at": "2023-06-20 11:32:56"
+  },
+  {
+    "id": 5,
+    "route_id": 6,
+    "locale": "ru",
+    "name": "Муйнак",
+    "details": "Посещение Муйнака - бывшего порта на Аральском море.",
+    "placement": "-",
+    "created_at": "2023-06-20 11:32:56",
+    "updated_at": "2023-06-20 11:34:31"
+  },
+  {
+    "id": 7,
+    "route_id": 4,
+    "locale": "en",
+    "name": "Nukus",
+    "details": "Arrival in Nukus, check-in at the hotel. Visit the Igor Savitsky Museum, the local market, and the main square",
+    "placement": "Hotel",
+    "created_at": "2023-06-20 11:37:20",
+    "updated_at": "2023-06-20 11:37:20"
+  },
+  {
+    "id": 8,
+    "route_id": 5,
+    "locale": "en",
+    "name": "Aral Sea",
+    "details": "Journey to the Aral Sea, camping experience in tents",
+    "placement": "Camp",
+    "created_at": "2023-06-20 11:37:20",
+    "updated_at": "2023-06-20 11:37:20"
+  },
+  {
+    "id": 9,
+    "route_id": 6,
+    "locale": "en",
+    "name": "Muynak",
+    "details": "Visit Muynak, a former port on the Aral Sea",
+    "placement": "-",
+    "created_at": "2023-06-20 11:37:20",
+    "updated_at": "2023-06-20 11:37:20"
+  },
+  {
+    "id": 15,
+    "route_id": 4,
+    "locale": "fr",
+    "name": "Нукус (ru)",
+    "details": "Прибытие в Нукус, размещение в гостинице. Возможность посещения музея им. Игоря Савицкого, городского рынка и главной площади. (ru)",
+    "placement": "Гостиница (ru)",
+    "created_at": "2023-06-21 07:27:32",
+    "updated_at": "2023-06-21 07:27:32"
+  },
+  {
+    "id": 16,
+    "route_id": 5,
+    "locale": "fr",
+    "name": "Аральское море (ru)",
+    "details": "Путешествие к Аральскому морю, размещение в палатках. (ru)",
+    "placement": "Палатка (ru)",
+    "created_at": "2023-06-21 07:27:32",
+    "updated_at": "2023-06-21 07:27:32"
+  },
+  {
+    "id": 17,
+    "route_id": 6,
+    "locale": "fr",
+    "name": "Муйнак (ru)",
+    "details": "Посещение Муйнака - бывшего порта на Аральском море. (ru)",
+    "placement": "(ru)",
+    "created_at": "2023-06-21 07:27:32",
+    "updated_at": "2023-06-21 07:27:32"
+  },
+  {
+    "id": 18,
+    "route_id": 4,
+    "locale": "it",
+    "name": "Нукус (ru)",
+    "details": "Прибытие в Нукус, размещение в гостинице. Возможность посещения музея им. Игоря Савицкого, городского рынка и главной площади. (ru)",
+    "placement": "Гостиница (ru)",
+    "created_at": "2023-06-21 07:28:16",
+    "updated_at": "2023-06-21 07:28:16"
+  },
+  {
+    "id": 19,
+    "route_id": 5,
+    "locale": "it",
+    "name": "Аральское море (ru)",
+    "details": "Путешествие к Аральскому морю, размещение в палатках. (ru)",
+    "placement": "Палатка (ru)",
+    "created_at": "2023-06-21 07:28:16",
+    "updated_at": "2023-06-21 07:28:16"
+  },
+  {
+    "id": 20,
+    "route_id": 6,
+    "locale": "it",
+    "name": "Muynak",
+    "details": "Посещение Муйнака - бывшего порта на Аральском море. (ru)",
+    "placement": "-",
+    "created_at": "2023-06-21 07:28:16",
+    "updated_at": "2023-06-21 07:28:29"
+  },
+  {
+    "id": 24,
+    "route_id": 15,
+    "locale": "ru",
+    "name": "Нукус",
+    "details": "Прибытие в Нукус, трансфер и размещение в гостинице.Туристы по-своему усмотрению могут посетить музей им. Игоря Савицкого, экспозицию художественных полотен русского авангарда, городской рынок, главную площадь.",
+    "placement": "Гостиница",
+    "created_at": "2023-06-21 11:39:28",
+    "updated_at": "2023-06-22 05:18:55"
+  },
+  {
+    "id": 25,
+    "route_id": 16,
+    "locale": "ru",
+    "name": "Аральское море",
+    "details": "Прибытие в Нукус, трансфер и размещение в гостинице.Туристы по-своему усмотрению могут посетить музей им. Игоря Савицкого, экспозицию художественных полотен русского авангарда, городской рынок, главную площадь.",
+    "placement": "Палатки",
+    "created_at": "2023-06-21 11:39:28",
+    "updated_at": "2023-06-22 05:18:55"
+  },
+  {
+    "id": 26,
+    "route_id": 17,
+    "locale": "ru",
+    "name": "Муйнак",
+    "details": "Прибытие в Нукус, трансфер и размещение в гостинице.Туристы по-своему усмотрению могут посетить музей им. Игоря Савицкого, экспозицию художественных полотен русского авангарда, городской рынок, главную площадь.",
+    "placement": "-",
+    "created_at": "2023-06-21 11:39:28",
+    "updated_at": "2023-06-22 05:18:55"
+  },
+  {
+    "id": 27,
+    "route_id": 18,
+    "locale": "ru",
+    "name": "Нукус",
+    "details": "Прибытие в Нукус, трансфер и размещение в гостинице.Туристы по-своему усмотрению могут посетить музей им. Игоря Савицкого, экспозицию художественных полотен русского авангарда, городской рынок, главную площадь.",
+    "placement": "-",
+    "created_at": "2023-06-22 05:18:55",
+    "updated_at": "2023-06-22 05:18:55"
+  },
+  {
+    "id": 29,
+    "route_id": 25,
+    "locale": "ru",
+    "name": "Bishkek",
+    "details": "Day 1: Arrival in Bishkek",
+    "placement": "Guesthouses, Yurts",
+    "created_at": "2023-06-26 05:06:56",
+    "updated_at": "2023-06-26 05:06:56"
+  },
+  {
+    "id": 30,
+    "route_id": 26,
+    "locale": "ru",
+    "name": "Karakol",
+    "details": "Day 2: Travel from Bishkek to Karakol",
+    "placement": "Guesthouses, Yurts",
+    "created_at": "2023-06-26 05:06:56",
+    "updated_at": "2023-06-26 05:06:56"
+  },
+  {
+    "id": 31,
+    "route_id": 27,
+    "locale": "ru",
+    "name": "Jeti-Oguz",
+    "details": "Day 3: Trekking in Jeti-Oguz",
+    "placement": "Yurts",
+    "created_at": "2023-06-26 05:06:56",
+    "updated_at": "2023-06-26 05:06:56"
+  },
+  {
+    "id": 32,
+    "route_id": 28,
+    "locale": "ru",
+    "name": "Issyk-Kul",
+    "details": "Day 4: Travel from Jeti-Oguz to Issyk-Kul",
+    "placement": "Yurts",
+    "created_at": "2023-06-26 05:06:56",
+    "updated_at": "2023-06-26 05:06:56"
+  },
+  {
+    "id": 33,
+    "route_id": 29,
+    "locale": "ru",
+    "name": "Bishkek",
+    "details": "Day 5: Return to Bishkek",
+    "placement": "Guesthouses, Yurts",
+    "created_at": "2023-06-26 05:06:56",
+    "updated_at": "2023-06-26 05:06:56"
+  },
+  {
+    "id": 34,
+    "route_id": 30,
+    "locale": "ru",
+    "name": "Dushanbe",
+    "details": "Day 1: Arrival in Dushanbe",
+    "placement": "Guesthouses, Homestays",
+    "created_at": "2023-06-26 05:07:08",
+    "updated_at": "2023-06-26 05:07:08"
+  },
+  {
+    "id": 35,
+    "route_id": 31,
+    "locale": "ru",
+    "name": "Khorog",
+    "details": "Day 2: Travel from Dushanbe to Khorog",
+    "placement": "Guesthouses, Homestays",
+    "created_at": "2023-06-26 05:07:08",
+    "updated_at": "2023-06-26 05:07:08"
+  },
+  {
+    "id": 36,
+    "route_id": 32,
+    "locale": "ru",
+    "name": "Murgab",
+    "details": "Day 3: Travel from Khorog to Murgab",
+    "placement": "Guesthouses, Homestays",
+    "created_at": "2023-06-26 05:07:08",
+    "updated_at": "2023-06-26 05:07:08"
+  },
+  {
+    "id": 37,
+    "route_id": 33,
+    "locale": "ru",
+    "name": "Langar",
+    "details": "Day 4: Travel from Murgab to Langar",
+    "placement": "Guesthouses, Homestays",
+    "created_at": "2023-06-26 05:07:08",
+    "updated_at": "2023-06-26 05:07:08"
+  },
+  {
+    "id": 38,
+    "route_id": 34,
+    "locale": "ru",
+    "name": "Dushanbe",
+    "details": "Day 5: Return to Dushanbe",
+    "placement": "Guesthouses, Homestays",
+    "created_at": "2023-06-26 05:07:08",
+    "updated_at": "2023-06-26 05:07:08"
+  },
+  {
+    "id": 39,
+    "route_id": 35,
+    "locale": "ru",
+    "name": "Ashgabat",
+    "details": "Day 1: Arrival in Ashgabat",
+    "placement": "Hotels",
+    "created_at": "2023-06-26 05:07:22",
+    "updated_at": "2023-06-26 05:07:22"
+  },
+  {
+    "id": 40,
+    "route_id": 36,
+    "locale": "ru",
+    "name": "Darvaza",
+    "details": "Day 2: Travel from Ashgabat to Darvaza",
+    "placement": "Hotels",
+    "created_at": "2023-06-26 05:07:22",
+    "updated_at": "2023-06-26 05:07:22"
+  },
+  {
+    "id": 41,
+    "route_id": 37,
+    "locale": "ru",
+    "name": "Mary",
+    "details": "Day 3: Travel from Darvaza to Mary",
+    "placement": "Hotels",
+    "created_at": "2023-06-26 05:07:22",
+    "updated_at": "2023-06-26 05:07:22"
+  },
+  {
+    "id": 42,
+    "route_id": 38,
+    "locale": "ru",
+    "name": "Turkmenabat",
+    "details": "Day 4: Travel from Mary to Turkmenabat",
+    "placement": "Hotels",
+    "created_at": "2023-06-26 05:07:22",
+    "updated_at": "2023-06-26 05:07:22"
+  },
+  {
+    "id": 43,
+    "route_id": 39,
+    "locale": "ru",
+    "name": "Ashgabat",
+    "details": "Day 5: Return to Ashgabat",
+    "placement": "Hotels",
+    "created_at": "2023-06-26 05:07:22",
+    "updated_at": "2023-06-26 05:07:22"
+  },
+  {
+    "id": 44,
+    "route_id": 40,
+    "locale": "ru",
+    "name": "Tashkent",
+    "details": "Day 1: Arrival in Tashkent",
+    "placement": "Hotels, Guesthouses",
+    "created_at": "2023-06-26 05:07:51",
+    "updated_at": "2023-06-26 05:07:51"
+  },
+  {
+    "id": 45,
+    "route_id": 41,
+    "locale": "ru",
+    "name": "Samarkand",
+    "details": "Day 2: Travel from Tashkent to Samarkand",
+    "placement": "Hotels, Guesthouses",
+    "created_at": "2023-06-26 05:07:51",
+    "updated_at": "2023-06-26 05:07:51"
+  },
+  {
+    "id": 46,
+    "route_id": 42,
+    "locale": "ru",
+    "name": "Bukhara",
+    "details": "Day 3: Travel from Samarkand to Bukhara",
+    "placement": "Hotels, Guesthouses",
+    "created_at": "2023-06-26 05:07:51",
+    "updated_at": "2023-06-26 05:07:51"
+  },
+  {
+    "id": 47,
+    "route_id": 43,
+    "locale": "ru",
+    "name": "Khiva",
+    "details": "Day 4: Travel from Bukhara to Khiva",
+    "placement": "Hotels, Guesthouses",
+    "created_at": "2023-06-26 05:07:51",
+    "updated_at": "2023-06-26 05:07:51"
+  },
+  {
+    "id": 48,
+    "route_id": 44,
+    "locale": "ru",
+    "name": "Tashkent",
+    "details": "Day 5: Return to Tashkent",
+    "placement": "Hotels, Guesthouses",
+    "created_at": "2023-06-26 05:07:51",
+    "updated_at": "2023-06-26 05:07:51"
+  }
+]

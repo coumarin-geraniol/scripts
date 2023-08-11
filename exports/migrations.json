@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "migration": "2014_10_12_000000_create_users_table",
+    "batch": 1
+  },
+  {
+    "id": 2,
+    "migration": "2014_10_12_100000_create_password_resets_table",
+    "batch": 1
+  },
+  {
+    "id": 3,
+    "migration": "2019_08_19_000000_create_failed_jobs_table",
+    "batch": 1
+  },
+  {
+    "id": 4,
+    "migration": "2019_12_14_000001_create_personal_access_tokens_table",
+    "batch": 1
+  },
+  {
+    "id": 5,
+    "migration": "2023_06_19_101537_create_categories_table",
+    "batch": 1
+  },
+  {
+    "id": 6,
+    "migration": "2023_06_19_101537_create_countries_table",
+    "batch": 1
+  },
+  {
+    "id": 7,
+    "migration": "2023_06_19_101538_create_tours_table",
+    "batch": 1
+  },
+  {
+    "id": 9,
+    "migration": "2023_06_19_101539_create_prices_table",
+    "batch": 1
+  },
+  {
+    "id": 10,
+    "migration": "2023_06_19_101746_create_routes_table",
+    "batch": 1
+  },
+  {
+    "id": 11,
+    "migration": "2023_06_20_032454_create_category_translations_table",
+    "batch": 1
+  },
+  {
+    "id": 12,
+    "migration": "2023_06_20_032455_create_country_translations_table",
+    "batch": 1
+  },
+  {
+    "id": 13,
+    "migration": "2023_06_20_032456_create_tour_translations_table",
+    "batch": 1
+  },
+  {
+    "id": 14,
+    "migration": "2023_06_20_032457_create_route_translations_table",
+    "batch": 1
+  },
+  {
+    "id": 15,
+    "migration": "2023_06_19_101539_create_galleries_table",
+    "batch": 2
+  },
+  {
+    "id": 16,
+    "migration": "2023_06_25_153650_create_texts_table",
+    "batch": 3
+  },
+  {
+    "id": 23,
+    "migration": "2023_07_02_164105_add_views_qty_column_to_tours",
+    "batch": 5
+  },
+  {
+    "id": 24,
+    "migration": "2023_07_02_185954_create_jobs_table",
+    "batch": 5
+  },
+  {
+    "id": 25,
+    "migration": "2023_07_02_204645_create_translations_table",
+    "batch": 5
+  },
+  {
+    "id": 27,
+    "migration": "2023_07_03_103922_add_meta_slug_column_to_tours",
+    "batch": 6
+  },
+  {
+    "id": 28,
+    "migration": "2023_07_03_103922_add_meta_slug_column_to_categories",
+    "batch": 7
+  },
+  {
+    "id": 29,
+    "migration": "2023_07_03_103922_add_meta_slug_column_to_countries",
+    "batch": 7
+  },
+  {
+    "id": 32,
+    "migration": "2023_07_10_114236_create_forms_table",
+    "batch": 8
+  },
+  {
+    "id": 34,
+    "migration": "2023_07_17_092505_add_columns_to_countries_table",
+    "batch": 9
+  },
+  {
+    "id": 39,
+    "migration": "2023_07_18_062022_create_cities_table",
+    "batch": 10
+  },
+  {
+    "id": 40,
+    "migration": "2023_07_19_060920_create_cuisines_table",
+    "batch": 10
+  },
+  {
+    "id": 41,
+    "migration": "2023_07_19_061121_create_souvenirs_table",
+    "batch": 10
+  },
+  {
+    "id": 42,
+    "migration": "2023_07_19_061132_create_sights_table",
+    "batch": 10
+  },
+  {
+    "id": 54,
+    "migration": "2023_07_21_092831_create_seo_tags_table",
+    "batch": 12
+  },
+  {
+    "id": 58,
+    "migration": "2023_07_21_042618_add_pages_to_countries_table",
+    "batch": 13
+  },
+  {
+    "id": 59,
+    "migration": "2023_07_23_114902_create_services_table",
+    "batch": 13
+  },
+  {
+    "id": 60,
+    "migration": "2023_07_23_115456_create_country_services_table",
+    "batch": 13
+  },
+  {
+    "id": 61,
+    "migration": "2023_08_02_231541_add_column_to_countries_table",
+    "batch": 14
+  },
+  {
+    "id": 62,
+    "migration": "2023_08_02_231554_add_column_to_cities_table",
+    "batch": 14
+  },
+  {
+    "id": 63,
+    "migration": "2023_08_02_232231_create_top_cities_table",
+    "batch": 14
+  },
+  {
+    "id": 64,
+    "migration": "2023_08_02_232451_create_top_sights_table",
+    "batch": 14
+  },
+  {
+    "id": 65,
+    "migration": "2023_08_06_160734_create_tour_city_table",
+    "batch": 14
+  },
+  {
+    "id": 66,
+    "migration": "2023_08_06_181136_add_column_visited_to_routes_table",
+    "batch": 15
+  },
+  {
+    "id": 67,
+    "migration": "2023_08_07_134837_add_column_to_tours_table",
+    "batch": 16
+  }
+]

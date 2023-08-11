@@ -1,0 +1,1192 @@
+[
+  {
+    "id": 1,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Тур в Нукус",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 2,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Экскурсия в Нукус - город, расположенный вблизи Аральского моря",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-04 07:26:55"
+  },
+  {
+    "id": 3,
+    "locale": "ru",
+    "column_name": "included",
+    "value": "Трансфер, размещение в гостиниц размещение размещение в гостинице",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-04 07:26:55"
+  },
+  {
+    "id": 4,
+    "locale": "ru",
+    "column_name": "excluded",
+    "value": "Питание, входные билеты",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 5,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Нукус",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 6,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "Прибытие в Нукус, размещение в гостинице. Возможность посещения музея им. Игоря Савицкого, городского рынка и главной площади.",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 7,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "Гостиница (ru)",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 8,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Аральское море",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 9,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "Путешествие к Аральскому морю, размещение в палатках.",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 10,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "Палатка (ru)",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 11,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Муйнак",
+    "translatable_id": 6,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 12,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "Посещение Муйнака - бывшего порта на Аральском море. (",
+    "translatable_id": 6,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 13,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "-",
+    "translatable_id": 6,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 03:35:49",
+    "updated_at": "2023-07-03 03:35:49"
+  },
+  {
+    "id": 14,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Казахстан",
+    "translatable_id": 1,
+    "translatable_type": "App\\Models\\Country",
+    "created_at": "2023-07-03 03:47:56",
+    "updated_at": "2023-07-03 03:47:56"
+  },
+  {
+    "id": 15,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Узбекистан",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Country",
+    "created_at": "2023-07-03 03:48:01",
+    "updated_at": "2023-07-03 03:48:01"
+  },
+  {
+    "id": 16,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Туркменистан",
+    "translatable_id": 3,
+    "translatable_type": "App\\Models\\Country",
+    "created_at": "2023-07-03 03:48:06",
+    "updated_at": "2023-07-03 03:48:06"
+  },
+  {
+    "id": 17,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Таджикистан",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Country",
+    "created_at": "2023-07-03 03:48:10",
+    "updated_at": "2023-07-03 03:48:10"
+  },
+  {
+    "id": 18,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Кыргызстан",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Country",
+    "created_at": "2023-07-03 03:48:14",
+    "updated_at": "2023-07-03 03:48:14"
+  },
+  {
+    "id": 19,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Природные пейзажи",
+    "translatable_id": 1,
+    "translatable_type": "App\\Models\\Category",
+    "created_at": "2023-07-03 03:48:49",
+    "updated_at": "2023-07-03 03:48:49"
+  },
+  {
+    "id": 20,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Исторические достопримечательности",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Category",
+    "created_at": "2023-07-03 03:48:55",
+    "updated_at": "2023-07-03 03:48:55"
+  },
+  {
+    "id": 21,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Кулинарные экскурсии",
+    "translatable_id": 3,
+    "translatable_type": "App\\Models\\Category",
+    "created_at": "2023-07-03 03:49:00",
+    "updated_at": "2023-07-03 03:49:00"
+  },
+  {
+    "id": 22,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Пляжный отдых",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Category",
+    "created_at": "2023-07-03 03:49:08",
+    "updated_at": "2023-07-03 03:49:08"
+  },
+  {
+    "id": 23,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Путешествия для активного отдыха",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Category",
+    "created_at": "2023-07-03 03:49:14",
+    "updated_at": "2023-07-03 03:49:14"
+  },
+  {
+    "id": 24,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Горнолыжные туры",
+    "translatable_id": 17,
+    "translatable_type": "App\\Models\\Category",
+    "created_at": "2023-07-03 03:49:30",
+    "updated_at": "2023-07-03 03:49:30"
+  },
+  {
+    "id": 25,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Приключенческие туры",
+    "translatable_id": 15,
+    "translatable_type": "App\\Models\\Category",
+    "created_at": "2023-07-03 03:49:40",
+    "updated_at": "2023-07-03 03:49:40"
+  },
+  {
+    "id": 26,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Культурные туры",
+    "translatable_id": 16,
+    "translatable_type": "App\\Models\\Category",
+    "created_at": "2023-07-03 03:49:47",
+    "updated_at": "2023-07-03 03:49:47"
+  },
+  {
+    "id": 27,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Городские туры",
+    "translatable_id": 14,
+    "translatable_type": "App\\Models\\Category",
+    "created_at": "2023-07-03 03:49:55",
+    "updated_at": "2023-07-03 03:49:55"
+  },
+  {
+    "id": 28,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Пляжные туры",
+    "translatable_id": 13,
+    "translatable_type": "App\\Models\\Category",
+    "created_at": "2023-07-03 03:50:11",
+    "updated_at": "2023-07-03 03:50:11"
+  },
+  {
+    "id": 29,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Отдых на Аральском море",
+    "translatable_id": 11,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 04:35:48",
+    "updated_at": "2023-07-03 04:35:48"
+  },
+  {
+    "id": 30,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Всем известно, что Аральское море высыхает. Согласно прогнозам ученых, существующая водная поверхность моря исчезнет в течение двух десятилетий. Песчаное дно моря, прозванное Аралкум (Аральский песок), будет служить свидетельством человеческому безумству, приведшему к исчезновению четвертого по величине замкнутого озера в мире.",
+    "translatable_id": 11,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 04:35:48",
+    "updated_at": "2023-07-03 04:35:48"
+  },
+  {
+    "id": 31,
+    "locale": "ru",
+    "column_name": "included",
+    "value": "Размещение в двухместном номере (2 ночи), Размещение в двухместных палатках на Аральском море, Транспортные услуги до Аральского моря и обратно (ru)",
+    "translatable_id": 11,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 04:35:48",
+    "updated_at": "2023-07-03 04:35:48"
+  },
+  {
+    "id": 32,
+    "locale": "ru",
+    "column_name": "excluded",
+    "value": "Авиаперелет, Не указанное в программе питание, Штрафные санкции за отмену тура(ru)",
+    "translatable_id": 11,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 04:35:48",
+    "updated_at": "2023-07-03 04:35:48"
+  },
+  {
+    "id": 33,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Нукус (ru)",
+    "translatable_id": 15,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 34,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "Прибытие в Нукус, трансфер и размещение в гостинице.Туристы по-своему усмотрению могут посетить музей им. Игоря Савицкого, экспозицию художественных полотен русского авангарда, городской рынок, главную площадь. (ru)",
+    "translatable_id": 15,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 35,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "Гостиница (ru)",
+    "translatable_id": 15,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 36,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Аральское море (ru)",
+    "translatable_id": 16,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 37,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "Прибытие в Нукус, трансфер и размещение в гостинице.Туристы по-своему усмотрению могут посетить музей им. Игоря Савицкого, экспозицию художественных полотен русского авангарда, городской рынок, главную площадь. (ru)",
+    "translatable_id": 16,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 38,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "Палатки (ru)",
+    "translatable_id": 16,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 39,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Муйнак (ru)",
+    "translatable_id": 17,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 40,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "Прибытие в Нукус, трансфер и размещение в гостинице.Туристы по-своему усмотрению могут посетить музей им. Игоря Савицкого, экспозицию художественных полотен русского авангарда, городской рынок, главную площадь. (ru)",
+    "translatable_id": 17,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 41,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "- (ru)",
+    "translatable_id": 17,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 42,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Нукус (ru)",
+    "translatable_id": 18,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 43,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "Прибытие в Нукус, трансфер и размещение в гостинице.Туристы по-своему усмотрению могут посетить музей им. Игоря Савицкого, экспозицию художественных полотен русского авангарда, городской рынок, главную площадь. (ru)",
+    "translatable_id": 18,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 44,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "- (ru)",
+    "translatable_id": 18,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 04:35:49",
+    "updated_at": "2023-07-03 04:35:49"
+  },
+  {
+    "id": 45,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "gsdfgdf",
+    "translatable_id": 19,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 10:59:38",
+    "updated_at": "2023-07-03 10:59:38"
+  },
+  {
+    "id": 46,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "gdfs",
+    "translatable_id": 19,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 10:59:38",
+    "updated_at": "2023-07-03 10:59:38"
+  },
+  {
+    "id": 47,
+    "locale": "ru",
+    "column_name": "included",
+    "value": "gdfs",
+    "translatable_id": 19,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 10:59:38",
+    "updated_at": "2023-07-03 10:59:38"
+  },
+  {
+    "id": 48,
+    "locale": "ru",
+    "column_name": "excluded",
+    "value": "gdfs",
+    "translatable_id": 19,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-03 10:59:38",
+    "updated_at": "2023-07-03 10:59:38"
+  },
+  {
+    "id": 49,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "43",
+    "translatable_id": 47,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 10:59:38",
+    "updated_at": "2023-07-03 10:59:38"
+  },
+  {
+    "id": 50,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "5432",
+    "translatable_id": 47,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 10:59:38",
+    "updated_at": "2023-07-03 10:59:38"
+  },
+  {
+    "id": 51,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "324",
+    "translatable_id": 47,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-03 10:59:38",
+    "updated_at": "2023-07-03 10:59:38"
+  },
+  {
+    "id": 52,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Classic Uzbekistan",
+    "translatable_id": 20,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 53,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "If you encounter a game or application that specifically requires DirectX 12 or a later version, you may need to consider upgrading your graphics card or operating system to meet the requirements.",
+    "translatable_id": 20,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:37:22"
+  },
+  {
+    "id": 54,
+    "locale": "ru",
+    "column_name": "included",
+    "value": "Visa, Tirdent, Refresh",
+    "translatable_id": 20,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 55,
+    "locale": "ru",
+    "column_name": "excluded",
+    "value": "Fresh, MOuse, PC, TV",
+    "translatable_id": 20,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 56,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "system",
+    "translatable_id": 48,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 57,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "currently running DirectX 11, it means that your graphics card and Windows installation support DirectX 11.",
+    "translatable_id": 48,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 58,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "DirectX",
+    "translatable_id": 48,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 59,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "Additionally",
+    "translatable_id": 49,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 60,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "multimedia and gaming APIs. It offers various features and enhancements for graphics rendering and performance.",
+    "translatable_id": 49,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 61,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "good",
+    "translatable_id": 49,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 62,
+    "locale": "ru",
+    "column_name": "name",
+    "value": "website",
+    "translatable_id": 50,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 63,
+    "locale": "ru",
+    "column_name": "details",
+    "value": "should be able to run most modern games and applications that require DirectX 11 or lower versions. However, it's important to note that some newer games and applications may require a",
+    "translatable_id": 50,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 64,
+    "locale": "ru",
+    "column_name": "placement",
+    "value": "typically",
+    "translatable_id": 50,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-07-17 10:35:26",
+    "updated_at": "2023-07-17 10:35:26"
+  },
+  {
+    "id": 65,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Нукус",
+    "translatable_id": 1,
+    "translatable_type": "App\\Models\\City",
+    "created_at": "2023-07-19 10:25:06",
+    "updated_at": "2023-07-19 10:40:21"
+  },
+  {
+    "id": 66,
+    "locale": "ru",
+    "column_name": "content",
+    "value": "Нукус Нукус Нукус",
+    "translatable_id": 1,
+    "translatable_type": "App\\Models\\City",
+    "created_at": "2023-07-19 10:25:06",
+    "updated_at": "2023-07-19 10:41:54"
+  },
+  {
+    "id": 67,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Бухара",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\City",
+    "created_at": "2023-07-19 11:13:56",
+    "updated_at": "2023-07-19 11:13:56"
+  },
+  {
+    "id": 68,
+    "locale": "ru",
+    "column_name": "content",
+    "value": "Узбекистан располагается между реками Амударья и Сырдарья — которые являются двумя большими реками, и граничит с такими странами как Туркменистан, Казахстан, Таджикистан, и Афганистан на Юге. По территории проходит Тяньшаньский и Памир-Алайский горные хребты в юго-восточной части и знаменитая пустыня Кызыл-Кум на севере.",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\City",
+    "created_at": "2023-07-19 11:13:56",
+    "updated_at": "2023-07-19 11:13:56"
+  },
+  {
+    "id": 69,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Самарканд",
+    "translatable_id": 3,
+    "translatable_type": "App\\Models\\City",
+    "created_at": "2023-07-20 10:07:27",
+    "updated_at": "2023-07-20 10:08:04"
+  },
+  {
+    "id": 70,
+    "locale": "ru",
+    "column_name": "content",
+    "value": "Отправляясь в тур, в города Великого Шелкового Пути Вы окунетесь в реальное приключение. Вы можете посетить археологические места, музеи, шумные и красочные восточные базары, которые наполнили запахи разновидностей пряностей. Узбекистан - земля легенд, яркого солнечного света, свежих фруктов и радостных дружелюбных людей.",
+    "translatable_id": 3,
+    "translatable_type": "App\\Models\\City",
+    "created_at": "2023-07-20 10:07:27",
+    "updated_at": "2023-07-20 10:07:27"
+  },
+  {
+    "id": 71,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Нурата",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\City",
+    "created_at": "2023-07-20 10:08:31",
+    "updated_at": "2023-07-20 10:08:31"
+  },
+  {
+    "id": 72,
+    "locale": "ru",
+    "column_name": "content",
+    "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ..",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\City",
+    "created_at": "2023-07-20 10:08:31",
+    "updated_at": "2023-07-20 10:08:31"
+  },
+  {
+    "id": 73,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "uzbekistan",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Country",
+    "created_at": "2023-07-24 03:38:09",
+    "updated_at": "2023-07-24 03:38:09"
+  },
+  {
+    "id": 74,
+    "locale": "ru",
+    "column_name": "content",
+    "value": "<p>Lorem Ipsum is simply dummy text of the <a class=\"external\" href=\"../../../cities/buhara\">printing </a>and</p>\r\n<p>typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal <a class=\"external\" href=\"../../../cities/fasd\">distribution </a>of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Country",
+    "created_at": "2023-07-24 03:38:09",
+    "updated_at": "2023-07-27 07:08:35"
+  },
+  {
+    "id": 75,
+    "locale": "ru",
+    "column_name": "why_visit",
+    "value": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident,</p>",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Country",
+    "created_at": "2023-07-24 03:38:09",
+    "updated_at": "2023-07-27 05:42:36"
+  },
+  {
+    "id": 76,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Авиасообщение",
+    "translatable_id": 1,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:45:23",
+    "updated_at": "2023-07-25 04:45:23"
+  },
+  {
+    "id": 77,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "aviasoobshhenie",
+    "translatable_id": 1,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:45:23",
+    "updated_at": "2023-07-25 04:45:23"
+  },
+  {
+    "id": 78,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Приобретение и доставка авиабилетов на рейсы между городами Узбекистана",
+    "translatable_id": 1,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:45:23",
+    "updated_at": "2023-07-25 04:45:23"
+  },
+  {
+    "id": 79,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Трансфер",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:46:22",
+    "updated_at": "2023-07-25 04:46:22"
+  },
+  {
+    "id": 80,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "transfer",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:46:22",
+    "updated_at": "2023-07-25 04:46:22"
+  },
+  {
+    "id": 81,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Наш сервис обеспечивает безопасный и своевременный трансфер до любой точки.",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:46:22",
+    "updated_at": "2023-07-25 04:49:22"
+  },
+  {
+    "id": 82,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Встреча и проводы",
+    "translatable_id": 3,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:47:53",
+    "updated_at": "2023-07-25 04:47:53"
+  },
+  {
+    "id": 83,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "vstreca-i-provody",
+    "translatable_id": 3,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:47:53",
+    "updated_at": "2023-07-25 04:47:53"
+  },
+  {
+    "id": 84,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Мы предлагаем услуги по организации встреч и проводов, гарантируя комфорт, надёжность и превосходное обслуживание.",
+    "translatable_id": 3,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:47:53",
+    "updated_at": "2023-07-25 05:06:52"
+  },
+  {
+    "id": 85,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Аренда туристического снаряжения",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:48:53",
+    "updated_at": "2023-07-25 04:48:53"
+  },
+  {
+    "id": 86,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "arenda-turisticeskogo-snariazeniia",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:48:53",
+    "updated_at": "2023-07-25 04:48:53"
+  },
+  {
+    "id": 87,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Мы предлагаем всё необходимое для идеального отдыха на природе.",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:48:53",
+    "updated_at": "2023-07-25 04:48:53"
+  },
+  {
+    "id": 88,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Прокат автомобилей",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:49:46",
+    "updated_at": "2023-07-25 04:49:46"
+  },
+  {
+    "id": 89,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "prokat-avtomobilei",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:49:46",
+    "updated_at": "2023-07-25 04:49:46"
+  },
+  {
+    "id": 90,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Приобретение и доставка билетов на поезда, курсирующие по Узбекистану",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:49:46",
+    "updated_at": "2023-07-25 04:49:46"
+  },
+  {
+    "id": 91,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Бронирование гостиниц",
+    "translatable_id": 6,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:50:20",
+    "updated_at": "2023-07-25 04:50:20"
+  },
+  {
+    "id": 92,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "bronirovanie-gostinic",
+    "translatable_id": 6,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:50:20",
+    "updated_at": "2023-07-25 04:50:20"
+  },
+  {
+    "id": 93,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Подбор подходящей гостиницы на даты вашей поездки по Городу",
+    "translatable_id": 6,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:50:20",
+    "updated_at": "2023-07-25 04:50:20"
+  },
+  {
+    "id": 94,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Прокат велосипедов",
+    "translatable_id": 7,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:50:39",
+    "updated_at": "2023-07-25 04:50:39"
+  },
+  {
+    "id": 95,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "prokat-velosipedov",
+    "translatable_id": 7,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:50:39",
+    "updated_at": "2023-07-25 04:50:39"
+  },
+  {
+    "id": 96,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Исследуйте окрестности на велосипеде, доступном к прокату.",
+    "translatable_id": 7,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:50:39",
+    "updated_at": "2023-07-25 04:50:39"
+  },
+  {
+    "id": 97,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Прокат автомобилей",
+    "translatable_id": 8,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:51:15",
+    "updated_at": "2023-07-25 04:51:15"
+  },
+  {
+    "id": 98,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "prokat-avtomobilei",
+    "translatable_id": 8,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:51:15",
+    "updated_at": "2023-07-25 04:51:15"
+  },
+  {
+    "id": 99,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Откройте для себя удобство наших автомобилей на прокат, подходящих для любого бюджета.",
+    "translatable_id": 8,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:51:15",
+    "updated_at": "2023-07-25 04:51:15"
+  },
+  {
+    "id": 100,
+    "locale": "ru",
+    "column_name": "title",
+    "value": "Услуги гидов",
+    "translatable_id": 9,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:51:37",
+    "updated_at": "2023-07-25 04:51:37"
+  },
+  {
+    "id": 101,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "uslugi-gidov",
+    "translatable_id": 9,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:51:37",
+    "updated_at": "2023-07-25 04:51:37"
+  },
+  {
+    "id": 102,
+    "locale": "ru",
+    "column_name": "description",
+    "value": "Наши профессиональные гиды помогут вам узнать страну изнутри.",
+    "translatable_id": 9,
+    "translatable_type": "App\\Models\\Service",
+    "created_at": "2023-07-25 04:51:37",
+    "updated_at": "2023-07-25 04:51:37"
+  },
+  {
+    "id": 103,
+    "locale": "ru",
+    "column_name": "slug",
+    "value": "nukus",
+    "translatable_id": 1,
+    "translatable_type": "App\\Models\\City",
+    "created_at": "2023-07-27 07:36:47",
+    "updated_at": "2023-07-27 07:36:47"
+  },
+  {
+    "id": 104,
+    "locale": "en",
+    "column_name": "name",
+    "value": "Тур в Нукус",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 105,
+    "locale": "en",
+    "column_name": "slug",
+    "value": "tur-v-nukus",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 106,
+    "locale": "en",
+    "column_name": "description",
+    "value": "<p>Please note that &ldquo;Peopletravel&rdquo; Company has the right to change hotels from the list in case if they are full to analogue. Bike rental includes the bike of Giant model (Rincon, Revel 1 models), reserve inner tube, frontal and rear lamp. Bike sizes are from 17 to 23 inch (little, middle, big). Bike helmet, gloves and bike clothes are to bring by yourself Cycling tours in Uzbekistan Tourism can be different: active and passive, savage and civilized, extreme and sightseeing. To which type of tourism cycling can be referred? In principle, it can be attributed to any group other than passive. Lovers of cycling are distinguished by love to an active lifestyle, desire to see as much as possible, and wish to visit interesting places, cities and countries. The beauty of cycling is that you can come in for a place by car, train, plane, then reassemble your iron horse and go on further travel or sightseeing. Uzbekistan, with its amazing nature, along with interesting historical monuments, meets the case for cycling tours in Uzbekistan. Advantages of biking in Uzbekistan Biking in Uzbekistan is by-turn the mobile and cost-effective types of tourism. But if you want to use such kind of travel you need not only the bike, but also good physical training. Technical progress together with the bicycle gave us the opportunity to go further, to see more and have stronger health. Traveling by bike promotes good health. Biking helps to strengthen the leg muscles, in addition, strengthens and normalizes the activity of the respiratory and cardiovascular systems of the body. Biking can be short and long-continued. It is evident, bike tours in Uzbekistan are one of the most widely-spread kinds of summer holidays and entertainment. Travel agencies started to organize tours in Uzbekistan by bicycle to the most remote and exotic places &ndash; mountains, valleys and deserts. Peopletravel Company is one of prosperous agencies, practicing and offering cycling tours along Uzbekistan. List of Uzbekistan bike tours from Peopletravel Company Our company is eager to list the following tours in Uzbekistan by bicycle: bike tours in Uzbekistan with excursions in ancient cities of Uzbekistan (Samarkand, Bukhara, Khiva, Tashkent and etc.); cycling tours in Uzbekistan in the Tien Shan and Pamir-Alai mountains; bicycle tours through the cities and historical sites of the Great Silk Road; combined bicycle trip across Uzbekistan. Season of cycling in Uzbekistan begins from the middle of April to November. There are special routes for each season. In spring it would be better to start Uzbekistan cycling tours from the flowering desert, in the mountains at this time is still quite cold, especially in downhill. First of all you have to plan your travel itinerary. In working out the bicycle tours across Uzbekistan you need to calculate the duration and time of halts, considering the physical possibilities of participants of a campaign. Peopletravel Company is glad to help you in this affair and offer its services. To book bicycle tours along Uzbekistan with Peopletravel Company you just need to choose the appropriate travel trip in Uzbekistan on our website and use the option below, indicating your data. &nbsp;<br />Обзор поездки</p>",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-10 08:41:15"
+  },
+  {
+    "id": 107,
+    "locale": "en",
+    "column_name": "included",
+    "value": "<p>Трансфер, размещение в гостинице.</p>",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 108,
+    "locale": "en",
+    "column_name": "excluded",
+    "value": "<p>Питание, входные билеты</p>",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 109,
+    "locale": "en",
+    "column_name": "placing",
+    "value": "Прибытие в Нукус, размещение в гостинице. Возможность посещения музея им. Игоря Савицкого, городского рынка и главной площади.",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 110,
+    "locale": "en",
+    "column_name": "route",
+    "value": "Прибытие в Нукус, размещение в гостинице. Возможность посещения музея им. Игоря Савицкого, городского рынка и главной площади.",
+    "translatable_id": 2,
+    "translatable_type": "App\\Models\\Tour",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 111,
+    "locale": "en",
+    "column_name": "name",
+    "value": "Нукус",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 112,
+    "locale": "en",
+    "column_name": "slug",
+    "value": "nukus",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 113,
+    "locale": "en",
+    "column_name": "details",
+    "value": "<p>Прибытие в Нукус, размещение в гостинице. Возможность посещения музея им. Игоря Савицкого, городского рынка и главной площади.</p>",
+    "translatable_id": 4,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 114,
+    "locale": "en",
+    "column_name": "name",
+    "value": "Аральское море",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 115,
+    "locale": "en",
+    "column_name": "slug",
+    "value": "aralskoe-more",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 116,
+    "locale": "en",
+    "column_name": "details",
+    "value": "<p>Путешествие к Аральскому морю, размещение в палатках.</p>",
+    "translatable_id": 5,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 117,
+    "locale": "en",
+    "column_name": "name",
+    "value": "Муйнак",
+    "translatable_id": 6,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 118,
+    "locale": "en",
+    "column_name": "slug",
+    "value": "muinak",
+    "translatable_id": 6,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  },
+  {
+    "id": 119,
+    "locale": "en",
+    "column_name": "details",
+    "value": "<p>Посещение Муйнака - бывшего порта на Аральском море. (</p>",
+    "translatable_id": 6,
+    "translatable_type": "App\\Models\\Route",
+    "created_at": "2023-08-09 09:28:38",
+    "updated_at": "2023-08-09 09:28:38"
+  }
+]

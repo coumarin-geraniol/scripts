@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Nature Landscapes",
+    "created_at": "2023-06-20 11:16:06",
+    "updated_at": "2023-07-04 03:27:23",
+    "slug": "nature-landscapes",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null
+  },
+  {
+    "id": 2,
+    "name": "Historical Landmarks",
+    "created_at": "2023-06-20 11:16:19",
+    "updated_at": "2023-07-04 03:27:23",
+    "slug": "historical-landmarks",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null
+  },
+  {
+    "id": 3,
+    "name": "Culinary Tours",
+    "created_at": "2023-06-20 11:16:26",
+    "updated_at": "2023-07-04 03:27:23",
+    "slug": "culinary-tours",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null
+  },
+  {
+    "id": 4,
+    "name": "Beach Vacations",
+    "created_at": "2023-06-20 11:16:35",
+    "updated_at": "2023-07-04 03:27:23",
+    "slug": "beach-vacations",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null
+  },
+  {
+    "id": 5,
+    "name": "Adventure Travel",
+    "created_at": "2023-06-20 11:16:42",
+    "updated_at": "2023-07-04 03:27:23",
+    "slug": "adventure-travel",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null
+  },
+  {
+    "id": 13,
+    "name": "Beach Tours",
+    "created_at": "2023-06-22 14:14:31",
+    "updated_at": "2023-07-04 03:27:23",
+    "slug": "beach-tours",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null
+  },
+  {
+    "id": 14,
+    "name": "City Tours",
+    "created_at": "2023-06-22 14:14:31",
+    "updated_at": "2023-07-04 03:27:23",
+    "slug": "city-tours",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null
+  },
+  {
+    "id": 15,
+    "name": "Adventure Tours",
+    "created_at": "2023-06-22 14:14:31",
+    "updated_at": "2023-07-04 03:27:23",
+    "slug": "adventure-tours",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null
+  },
+  {
+    "id": 16,
+    "name": "Cultural Tours",
+    "created_at": "2023-06-22 14:14:31",
+    "updated_at": "2023-07-04 03:27:23",
+    "slug": "cultural-tours",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null
+  },
+  {
+    "id": 17,
+    "name": "Ski Tours",
+    "created_at": "2023-06-22 14:14:31",
+    "updated_at": "2023-07-04 03:27:23",
+    "slug": "ski-tours",
+    "seo_title": null,
+    "seo_descr": null,
+    "meta_keywords": null
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 2,
+    "name": "estee erol",
+    "email": "esteeerol@gmail.com",
+    "email_verified_at": null,
+    "password": "$2y$10$4YkXjRCcllPD5Bss7eYkRuA/KschaJIaThfSySQBJGcsGQxlcM1F.",
+    "remember_token": null,
+    "created_at": "2023-06-21 07:16:27",
+    "updated_at": "2023-06-21 07:19:27"
+  },
+  {
+    "id": 3,
+    "name": "Admin User",
+    "email": "admin@example.com",
+    "email_verified_at": null,
+    "password": "$2y$10$nPqKeves3AKfbZ8UjByF4e29ThcoaJLDb7/VV3j942vx7Vxed4t2y",
+    "remember_token": null,
+    "created_at": null,
+    "updated_at": null
+  }
+]

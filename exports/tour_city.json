@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "tour_id": 2,
+    "city_id": 2,
+    "created_at": null,
+    "updated_at": null
+  },
+  {
+    "id": 2,
+    "tour_id": 2,
+    "city_id": 3,
+    "created_at": null,
+    "updated_at": null
+  }
+]

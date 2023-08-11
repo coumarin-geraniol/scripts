@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "category_id": 1,
+    "locale": "ru",
+    "name": "Природные пейзажи",
+    "created_at": "2023-06-20 11:16:06",
+    "updated_at": "2023-06-20 11:16:10"
+  },
+  {
+    "id": 2,
+    "category_id": 2,
+    "locale": "ru",
+    "name": "Исторические достопримечательности",
+    "created_at": "2023-06-20 11:16:19",
+    "updated_at": "2023-06-20 11:16:19"
+  },
+  {
+    "id": 3,
+    "category_id": 3,
+    "locale": "ru",
+    "name": "Кулинарные экскурсии",
+    "created_at": "2023-06-20 11:16:26",
+    "updated_at": "2023-06-20 11:16:26"
+  },
+  {
+    "id": 4,
+    "category_id": 4,
+    "locale": "ru",
+    "name": "Пляжный отдых",
+    "created_at": "2023-06-20 11:16:35",
+    "updated_at": "2023-06-20 11:16:35"
+  },
+  {
+    "id": 5,
+    "category_id": 5,
+    "locale": "ru",
+    "name": "Путешествия для активного отдыха",
+    "created_at": "2023-06-20 11:16:42",
+    "updated_at": "2023-06-20 11:16:42"
+  },
+  {
+    "id": 6,
+    "category_id": 1,
+    "locale": "de",
+    "name": "Naturlandschaften",
+    "created_at": "2023-06-20 11:16:58",
+    "updated_at": "2023-06-20 11:16:58"
+  },
+  {
+    "id": 7,
+    "category_id": 2,
+    "locale": "de",
+    "name": "Historische Sehenswürdigkeiten",
+    "created_at": "2023-06-20 11:17:09",
+    "updated_at": "2023-06-20 11:17:09"
+  },
+  {
+    "id": 8,
+    "category_id": 3,
+    "locale": "de",
+    "name": "Kulinarische Touren",
+    "created_at": "2023-06-20 11:17:17",
+    "updated_at": "2023-06-20 11:17:17"
+  },
+  {
+    "id": 9,
+    "category_id": 4,
+    "locale": "de",
+    "name": "Strandurlaub",
+    "created_at": "2023-06-20 11:17:27",
+    "updated_at": "2023-06-20 11:17:27"
+  },
+  {
+    "id": 10,
+    "category_id": 5,
+    "locale": "de",
+    "name": "Abenteuerreisen",
+    "created_at": "2023-06-20 11:17:39",
+    "updated_at": "2023-06-20 11:17:39"
+  },
+  {
+    "id": 12,
+    "category_id": 2,
+    "locale": "en",
+    "name": "Historical Landmarks",
+    "created_at": "2023-06-20 11:18:28",
+    "updated_at": "2023-06-20 11:18:28"
+  },
+  {
+    "id": 13,
+    "category_id": 1,
+    "locale": "en",
+    "name": "Nature Landscapes",
+    "created_at": "2023-06-20 11:18:37",
+    "updated_at": "2023-06-20 11:18:37"
+  },
+  {
+    "id": 14,
+    "category_id": 3,
+    "locale": "en",
+    "name": "Culinary Tours",
+    "created_at": "2023-06-20 11:18:46",
+    "updated_at": "2023-06-20 11:18:46"
+  },
+  {
+    "id": 15,
+    "category_id": 4,
+    "locale": "en",
+    "name": "Beach Vacations",
+    "created_at": "2023-06-20 11:18:57",
+    "updated_at": "2023-06-20 11:18:57"
+  },
+  {
+    "id": 16,
+    "category_id": 5,
+    "locale": "en",
+    "name": "Adventure Travel",
+    "created_at": "2023-06-20 11:19:07",
+    "updated_at": "2023-06-20 11:19:07"
+  },
+  {
+    "id": 17,
+    "category_id": 1,
+    "locale": "fr",
+    "name": "Paysages Naturels",
+    "created_at": "2023-06-20 11:19:21",
+    "updated_at": "2023-06-20 11:19:21"
+  },
+  {
+    "id": 18,
+    "category_id": 2,
+    "locale": "fr",
+    "name": "Sites Historiques",
+    "created_at": "2023-06-20 11:19:30",
+    "updated_at": "2023-06-20 11:19:30"
+  },
+  {
+    "id": 19,
+    "category_id": 3,
+    "locale": "fr",
+    "name": "Tours Gastronomiques",
+    "created_at": "2023-06-20 11:19:38",
+    "updated_at": "2023-06-20 11:19:38"
+  },
+  {
+    "id": 22,
+    "category_id": 4,
+    "locale": "fr",
+    "name": "Vacances à la Plage",
+    "created_at": "2023-06-20 11:21:27",
+    "updated_at": "2023-06-20 11:21:27"
+  },
+  {
+    "id": 23,
+    "category_id": 5,
+    "locale": "fr",
+    "name": "Voyages Aventure",
+    "created_at": "2023-06-20 11:21:35",
+    "updated_at": "2023-06-20 11:21:35"
+  },
+  {
+    "id": 57,
+    "category_id": 13,
+    "locale": "fr",
+    "name": "Tours à la plage",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 58,
+    "category_id": 13,
+    "locale": "de",
+    "name": "Strandtouren",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 59,
+    "category_id": 13,
+    "locale": "ru",
+    "name": "Пляжные туры",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 60,
+    "category_id": 13,
+    "locale": "en",
+    "name": "Beach Tours",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 61,
+    "category_id": 13,
+    "locale": "it",
+    "name": "Tour in spiaggia",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 62,
+    "category_id": 14,
+    "locale": "fr",
+    "name": "Tours de ville",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 63,
+    "category_id": 14,
+    "locale": "de",
+    "name": "Stadtrundfahrten",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 64,
+    "category_id": 14,
+    "locale": "ru",
+    "name": "Городские туры",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 65,
+    "category_id": 14,
+    "locale": "en",
+    "name": "City Tours",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 66,
+    "category_id": 14,
+    "locale": "it",
+    "name": "Tour in città",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 67,
+    "category_id": 15,
+    "locale": "fr",
+    "name": "Tours d'aventure",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 68,
+    "category_id": 15,
+    "locale": "de",
+    "name": "Abenteuertouren",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 69,
+    "category_id": 15,
+    "locale": "ru",
+    "name": "Приключенческие туры",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 70,
+    "category_id": 15,
+    "locale": "en",
+    "name": "Adventure Tours",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 71,
+    "category_id": 15,
+    "locale": "it",
+    "name": "Tour avventura",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 72,
+    "category_id": 16,
+    "locale": "fr",
+    "name": "Tours culturels",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 73,
+    "category_id": 16,
+    "locale": "de",
+    "name": "Kulturtouren",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 74,
+    "category_id": 16,
+    "locale": "ru",
+    "name": "Культурные туры",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 75,
+    "category_id": 16,
+    "locale": "en",
+    "name": "Cultural Tours",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 76,
+    "category_id": 16,
+    "locale": "it",
+    "name": "Tour culturali",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 77,
+    "category_id": 17,
+    "locale": "fr",
+    "name": "Tours de ski",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 78,
+    "category_id": 17,
+    "locale": "de",
+    "name": "Skitouren",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 79,
+    "category_id": 17,
+    "locale": "ru",
+    "name": "Горнолыжные туры",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 80,
+    "category_id": 17,
+    "locale": "en",
+    "name": "Ski Tours",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  },
+  {
+    "id": 81,
+    "category_id": 17,
+    "locale": "it",
+    "name": "Tour sulla neve",
+    "created_at": "2023-06-22 14:15:42",
+    "updated_at": "2023-06-22 14:15:42"
+  }
+]

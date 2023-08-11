@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "SEMAKHAT ARTIKOVA",
+    "phone": "05344257480",
+    "email": "semahatartikova@gmail.com",
+    "message": "gdfsgfdgfd",
+    "tour": "-",
+    "created_at": "2023-07-14 11:46:05",
+    "updated_at": "2023-07-14 11:46:05"
+  },
+  {
+    "id": 2,
+    "name": "Adiba AZAMATKHUJEVA",
+    "phone": "05344257480",
+    "email": "artikoadiba@gmail.com",
+    "message": "fgdfgdg",
+    "tour": "-",
+    "created_at": "2023-07-14 11:58:25",
+    "updated_at": "2023-07-14 11:58:25"
+  },
+  {
+    "id": 3,
+    "name": "SEMAKHAT AZAMATKHUJAEVA",
+    "phone": "05318204598",
+    "email": "semahat.azamat@gmail.com",
+    "message": "gdsfgsd",
+    "tour": "-",
+    "created_at": "2023-07-17 05:29:54",
+    "updated_at": "2023-07-17 05:29:54"
+  },
+  {
+    "id": 4,
+    "name": "«Запросить цену» вы соглашаетес",
+    "phone": "31242343523",
+    "email": "semahat@gmail.com",
+    "message": "пунктами публичной оферты и даете",
+    "tour": "-",
+    "created_at": "2023-08-10 11:59:41",
+    "updated_at": "2023-08-10 11:59:41"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 75,
+    "people_qty": 3,
+    "price": 50,
+    "tour_id": 13,
+    "created_at": "2023-06-26 10:05:34",
+    "updated_at": "2023-06-26 10:05:35"
+  },
+  {
+    "id": 80,
+    "people_qty": 1,
+    "price": 300,
+    "tour_id": 14,
+    "created_at": "2023-06-26 05:06:56",
+    "updated_at": "2023-06-26 05:06:56"
+  },
+  {
+    "id": 81,
+    "people_qty": 1,
+    "price": 250,
+    "tour_id": 15,
+    "created_at": "2023-06-26 05:07:08",
+    "updated_at": "2023-06-26 05:07:08"
+  },
+  {
+    "id": 82,
+    "people_qty": 2,
+    "price": 150,
+    "tour_id": 16,
+    "created_at": "2023-06-26 05:07:22",
+    "updated_at": "2023-06-26 05:07:22"
+  },
+  {
+    "id": 83,
+    "people_qty": 2,
+    "price": 180,
+    "tour_id": 17,
+    "created_at": "2023-06-26 05:07:51",
+    "updated_at": "2023-06-26 05:07:51"
+  },
+  {
+    "id": 92,
+    "people_qty": 34,
+    "price": 5432,
+    "tour_id": 19,
+    "created_at": "2023-07-04 06:11:57",
+    "updated_at": "2023-07-04 06:11:57"
+  },
+  {
+    "id": 103,
+    "people_qty": 2,
+    "price": 500,
+    "tour_id": 11,
+    "created_at": "2023-07-10 08:12:25",
+    "updated_at": "2023-07-10 08:12:25"
+  },
+  {
+    "id": 104,
+    "people_qty": 4,
+    "price": 1000,
+    "tour_id": 11,
+    "created_at": "2023-07-10 08:12:25",
+    "updated_at": "2023-07-10 08:12:25"
+  },
+  {
+    "id": 105,
+    "people_qty": 6,
+    "price": 1200,
+    "tour_id": 11,
+    "created_at": "2023-07-10 08:12:25",
+    "updated_at": "2023-07-10 08:12:25"
+  },
+  {
+    "id": 106,
+    "people_qty": 8,
+    "price": 1400,
+    "tour_id": 11,
+    "created_at": "2023-07-10 08:12:25",
+    "updated_at": "2023-07-10 08:12:25"
+  },
+  {
+    "id": 117,
+    "people_qty": 2,
+    "price": 33,
+    "tour_id": 20,
+    "created_at": "2023-07-17 10:38:14",
+    "updated_at": "2023-07-17 10:38:14"
+  },
+  {
+    "id": 118,
+    "people_qty": 4,
+    "price": 66,
+    "tour_id": 20,
+    "created_at": "2023-07-17 10:38:14",
+    "updated_at": "2023-07-17 10:38:14"
+  },
+  {
+    "id": 119,
+    "people_qty": 6,
+    "price": 150,
+    "tour_id": 20,
+    "created_at": "2023-07-17 10:38:14",
+    "updated_at": "2023-07-17 10:38:14"
+  },
+  {
+    "id": 124,
+    "people_qty": 2,
+    "price": 34,
+    "tour_id": 2,
+    "created_at": "2023-08-10 09:10:23",
+    "updated_at": "2023-08-10 09:10:23"
+  },
+  {
+    "id": 125,
+    "people_qty": 4,
+    "price": 90,
+    "tour_id": 2,
+    "created_at": "2023-08-10 09:10:23",
+    "updated_at": "2023-08-10 09:10:23"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Авиасообщение",
+    "icon": "images/wMcFzpw2kGEzXOoDmRzfVvalwEQfcaIaCZB0lFBE.jpg",
+    "description": "Приобретение и доставка авиабилетов на рейсы между городами Узбекистана",
+    "created_at": "2023-07-25 04:45:23",
+    "updated_at": "2023-07-25 04:45:23"
+  },
+  {
+    "id": 2,
+    "title": "Трансфер",
+    "icon": "images/FzL8s72ZIDG1BYURvPvddBNXNZlMBUzJxVgLtO8j.jpg",
+    "description": "It is a long established fact that a reader will be distracted by the readable content",
+    "created_at": "2023-07-25 04:46:22",
+    "updated_at": "2023-07-25 04:46:22"
+  },
+  {
+    "id": 3,
+    "title": "Встреча и проводы",
+    "icon": "images/qfjLg7qLZVBZjQ134888MOUmDMdeDLvkueb0OKbn.jpg",
+    "description": "Мы предлагаем услуги по организации встреч и проводов, гарантируя комфорт, надёжность и превосходное обслуживание. Мы учтем ваши индивидуальные пожелания, обеспечив качественное проведение встреч и проводов.",
+    "created_at": "2023-07-25 04:47:53",
+    "updated_at": "2023-07-25 04:47:53"
+  },
+  {
+    "id": 4,
+    "title": "Аренда туристического снаряжения",
+    "icon": "images/7mvI9BQndJnItZPeUqSwax7VpftPzLtYOuyUZiwf.jpg",
+    "description": "Мы предлагаем всё необходимое для идеального отдыха на природе.",
+    "created_at": "2023-07-25 04:48:53",
+    "updated_at": "2023-07-25 04:48:53"
+  },
+  {
+    "id": 5,
+    "title": "Прокат автомобилей",
+    "icon": "images/CESR4zMCdlo7nXYoYyxIrruLLkZ8QqOxn5Y9soq5.jpg",
+    "description": "Приобретение и доставка билетов на поезда, курсирующие по Узбекистану",
+    "created_at": "2023-07-25 04:49:46",
+    "updated_at": "2023-07-25 04:49:46"
+  },
+  {
+    "id": 6,
+    "title": "Бронирование гостиниц",
+    "icon": "images/mRKf4WfGnI7C8W8IUxtmJPYOKbghyDqqZS9OxPMD.jpg",
+    "description": "Подбор подходящей гостиницы на даты вашей поездки по Городу",
+    "created_at": "2023-07-25 04:50:20",
+    "updated_at": "2023-07-25 04:50:20"
+  },
+  {
+    "id": 7,
+    "title": "Прокат велосипедов",
+    "icon": "images/YFOnOztS6j2t96lU1kmku1aBveVqQ1o3VXNXkma6.jpg",
+    "description": "Исследуйте окрестности на велосипеде, доступном к прокату.",
+    "created_at": "2023-07-25 04:50:39",
+    "updated_at": "2023-07-25 04:50:39"
+  },
+  {
+    "id": 8,
+    "title": "Прокат автомобилей",
+    "icon": "images/7bWXUezRVYQ8poT5J28RUb6Bg2yHAeTqHxtUKops.jpg",
+    "description": "Откройте для себя удобство наших автомобилей на прокат, подходящих для любого бюджета.",
+    "created_at": "2023-07-25 04:51:15",
+    "updated_at": "2023-07-25 04:51:15"
+  },
+  {
+    "id": 9,
+    "title": "Услуги гидов",
+    "icon": "images/wp2Z3DCqq15qbaGDP7q1xfEq0uRNk14qHOfueD18.jpg",
+    "description": "Наши профессиональные гиды помогут вам узнать страну изнутри.",
+    "created_at": "2023-07-25 04:51:37",
+    "updated_at": "2023-07-25 04:51:37"
+  }
+]
