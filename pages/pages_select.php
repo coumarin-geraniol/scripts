@@ -7,8 +7,6 @@ $dbname = "modx";
 
 // Создаем подключение
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Открываем файл для записи SQL запросов
-$file = fopen("migrate_data.sql", "w");
 
 // Проверяем подключение
 if ($conn->connect_error) {
