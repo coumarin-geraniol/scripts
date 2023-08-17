@@ -143,4 +143,20 @@ body {
 }
 
 
+@media (min-width: 1024px) {
+  .breadcrumb{
+    display: none !important;
+  }
+  .pushNav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .js-topPushNav > li[data-id="1"],
+  .js-topPushNav > li[data-id="2"] {
+    width: 50%;
+  }
+}
+
+
 

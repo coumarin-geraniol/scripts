@@ -2,64 +2,80 @@
 // Параметры подключения к базе данных
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "mynewpassword";
 $dbname = "modx";
 
 // Создаем подключение
 $conn = new mysqli($servername, $username, $password, $dbname);
+// Открываем файл для записи SQL запросов
+$file = fopen("migrate_data.sql", "w");
 
 // Проверяем подключение
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Запрос для извлечения данных из таблицы modx_site_content
-$query_1 = "
-    SELECT id, context_key, parent, isfolder
-    FROM modx_site_content
-    WHERE parent = 124 AND context_key LIKE 'web' AND id NOT IN (133, 135, 146, 149, 564, 2711, 3149);
-";
+function fetch_and_print_translations($conn, $contentid) {
+    $query_translations = "
+        SELECT value
+        FROM modx_site_tmplvar_contentvalues
+        WHERE tmplvarid = 25 AND contentid = $contentid;
+    ";
+    $result_translations = $conn->query($query_translations);
 
-// Выполняем первый запрос
-$result_1 = $conn->query($query_1);
-$pages_uzbekistan_english_ids = [];
-
-echo "Pages Uzbekistan in English:<br>";
-while($row = $result_1->fetch_assoc()) {
-    $pages_uzbekistan_english_ids[] = $row['id'];
-    echo "id: " . $row['id']. " - context_key: " . $row['context_key']. " - parent: " . $row['parent']. " - isfolder: " . $row['isfolder'] . "<br>";
+    while ($translation = $result_translations->fetch_assoc()) {
+        $pairs = explode(';', $translation['value']);
+        foreach ($pairs as $pair) {
+            list($locale, $translated_id) = explode(':', $pair);
+            echo "&nbsp;&nbsp;&nbsp;&nbsp;Translation - id: $translated_id - Language: $locale" . ", ";
+        }
+        echo "<br>";
+    }
 }
 
-// Запрос для извлечения дочерних элементов, где isfolder=1
-$query_2 = "
+// Запрос для извлечения Main Pages
+$query_main_pages = "
     SELECT id, context_key, parent, isfolder
     FROM modx_site_content
-    WHERE parent IN (" . implode(',', $pages_uzbekistan_english_ids) . ") AND isfolder = 1;
+    WHERE parent = 124 AND context_key LIKE 'web' AND isfolder = 1
+    AND id NOT IN (133, 135, 146, 149, 564, 2711, 3149, 564);
 ";
+$result_main_pages = $conn->query($query_main_pages);
 
-// Выполняем второй запрос
-$result_2 = $conn->query($query_2);
-$child_pages_ids = [];
+echo "Main Pages:<br>";
+while($main_page = $result_main_pages->fetch_assoc()) {
+    echo "id: " . $main_page['id']. " - parent: " . $main_page['parent']. " - isfolder: " . $main_page['isfolder'] . "&nbsp;&nbsp;&nbsp;&nbsp;------>";
+    fetch_and_print_translations($conn, $main_page['id']);
+    // Запрос для извлечения Sub Pages для текущей Main Page
+    $query_sub_pages = "
+        SELECT id, context_key, parent, isfolder
+        FROM modx_site_content
+        WHERE parent = " . $main_page['id'] . " AND isfolder = 0;
+    ";
+    $result_sub_pages = $conn->query($query_sub_pages);
 
-echo "<br>Child Pages:<br>";
-while($row = $result_2->fetch_assoc()) {
-    $child_pages_ids[] = $row['id'];
-    echo "id: " . $row['id']. " - context_key: " . $row['context_key']. " - parent: " . $row['parent']. " - isfolder: " . $row['isfolder'] . "<br>";
+    echo "&nbsp;&nbsp;Sub Pages:<br>";
+    while($sub_page = $result_sub_pages->fetch_assoc()) {
+        echo "&nbsp;&nbsp;id: " . $sub_page['id']. " - parent: " . $sub_page['parent']. " - isfolder: " . $sub_page['isfolder'] . "&nbsp;&nbsp;&nbsp;&nbsp;------>";
+        fetch_and_print_translations($conn, $sub_page['id']);
+    }
+
+    echo "<br>";
 }
-
-// Запрос для извлечения переводов из таблицы modx_site_tmplvar_contentvalues
-$query_3 = "
-    SELECT contentid, value
-    FROM modx_site_tmplvar_contentvalues
-    WHERE tmplvarid = 25 AND contentid IN (" . implode(',', array_merge($pages_uzbekistan_english_ids, $child_pages_ids)) . ");
+echo "<br>";
+echo "<br>";
+// Запрос для извлечения Single Pages
+$query_single_pages = "
+    SELECT id, context_key, parent, isfolder
+    FROM modx_site_content
+    WHERE parent = 124 AND isfolder = 0 AND context_key LIKE 'web' AND id NOT IN (133, 135, 146, 149, 564, 2711, 3149, 564);
 ";
+$result_single_pages = $conn->query($query_single_pages);
 
-// Выполняем третий запрос
-$result_3 = $conn->query($query_3);
-
-echo "<br>Translations:<br>";
-while($row = $result_3->fetch_assoc()) {
-    echo "contentid: " . $row['contentid']. " - value: " . $row['value'] . "<br>";
+echo "<br>Single Pages:<br>";
+while($single_page = $result_single_pages->fetch_assoc()) {
+    echo "id: " . $single_page['id']. " - parent: " . $single_page['parent']. " - isfolder: " . $single_page['isfolder'] . "&nbsp;&nbsp;&nbsp;&nbsp;------>";
+    fetch_and_print_translations($conn, $single_page['id']);
 }
 
 // Закрываем подключение
