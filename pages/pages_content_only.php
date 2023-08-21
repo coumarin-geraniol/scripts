@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Открываем файл для записи SQL запросов
-$file = fopen("pages_content.sql", "w");
+$file = fopen("pages_content_only.txt", "w");
 
 // Счетчик для генерации новых id для строк в таблице pages
 $id_counter = 1;
@@ -29,11 +29,7 @@ function generate_insert_sql($conn, $contentid, $newid, $parentid = "NULL") {
     $result_content = $conn->query($query_content);
     $row = $result_content->fetch_assoc();
 
-    $sql = "INSERT INTO pages (id, country_id, parent_id, content, preview_image, images) VALUES ";
-    $sql .= "($newid, 1, $parentid, ";
-    $sql .= "'" . addslashes($row['content']) . "', ";
-    $sql .= "'url-image', ";
-    $sql .= "'[]');\n";
+    $sql = "{{" . addslashes($row['content']) . "}}";
 
     return $sql;
 }
