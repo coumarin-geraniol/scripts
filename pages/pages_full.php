@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // Открываем файл для записи SQL запросов
-$file = fopen("pages_full.sql", "w");
+$file = fopen("pages_play.sql", "w");
 
 // Счетчик для генерации новых id для строк в таблице pages
 $id_counter = 1;
@@ -32,13 +32,11 @@ function generate_insert_sql($conn, $contentid, $newid, $parentid = "NULL") {
     $sql = "INSERT INTO pages (id, country_id, parent_id, title, content, slug, seo_title, seo_descr, meta_keywords, preview_image, images) VALUES ";
     $sql .= "($newid, 1, $parentid, ";
     $sql .= "'" . addslashes($row['pagetitle']) . "', ";
-    $sql .= "'" . addslashes($row['content']) . "', ";
     $sql .= "'" . addslashes($row['alias']) . "', ";
     $sql .= "'" . addslashes($row['longtitle']) . "', ";
     $sql .= "'" . addslashes($row['description']) . "', ";
-    $sql .= "'" . addslashes($row['introtext']) . "', ";
-    $sql .= "'url-image', ";
-    $sql .= "'[]');\n";
+    $sql .= "'" . addslashes($row['introtext']) . "' ";
+    $sql .= ");\n";
 
     return $sql;
 }
@@ -70,12 +68,6 @@ function save_translations($conn, $file, $contentid, $newid) {
             $result_content = $conn->query($query_content);
             $row = $result_content->fetch_assoc();
 
-            fwrite($file, generate_translation_sql($conn, $translated_id, $newid, $locale, 'title', $row['pagetitle']));
-            fwrite($file, generate_translation_sql($conn, $translated_id, $newid, $locale, 'content', $row['content']));
-            fwrite($file, generate_translation_sql($conn, $translated_id, $newid, $locale, 'slug', $row['alias']));
-            fwrite($file, generate_translation_sql($conn, $translated_id, $newid, $locale, 'seo_title', $row['longtitle']));
-            fwrite($file, generate_translation_sql($conn, $translated_id, $newid, $locale, 'seo_descr', $row['description']));
-            fwrite($file, generate_translation_sql($conn, $translated_id, $newid, $locale, 'meta_keywords', $row['introtext']));
         }
         fwrite($file,"\n");
     }

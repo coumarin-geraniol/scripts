@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "mynewpassword";
-$dbname = "modx_2";
+$dbname = "modx";
 
 // Создаем подключение
 $conn = new mysqli($servername, $username, $password, $dbname);
